@@ -79,12 +79,409 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Web前端" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/16/Web%E5%89%8D%E7%AB%AF/" class="article-date">
+  <time class="dt-published" datetime="2023-05-16T01:37:43.000Z" itemprop="datePublished">2023-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/16/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><h2 id="1-1-前端web开发："><a href="#1-1-前端web开发：" class="headerlink" title="1.1.前端web开发："></a>1.1.前端web开发：</h2><table>
+<thead>
+<tr>
+<th>技术</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML</td>
+<td>用于构建网站的基础结构的</td>
+</tr>
+<tr>
+<td>css</td>
+<td>用于美化页面的，作用和化妆或者整容作用一样</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>实现网页和用户的交互</td>
+</tr>
+<tr>
+<td>Vue</td>
+<td>主要用于将数据填充到html页面上的</td>
+</tr>
+<tr>
+<td>Element</td>
+<td>主要提供了一些非常美观的组件</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td>一款web服务器软件，可以用于部署我们的前端工程</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-后端web开发："><a href="#1-2-后端web开发：" class="headerlink" title="1.2.后端web开发："></a>1.2.后端web开发：</h2><table>
+<thead>
+<tr>
+<th>技术</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Maven</td>
+<td>一款java中用于管理项目的软件</td>
+</tr>
+<tr>
+<td>Mysql</td>
+<td>最常用的一款数据库软件之一</td>
+</tr>
+<tr>
+<td>SpringBoot</td>
+<td>spring家族的产品，当前最为主流的项目开发技术。</td>
+</tr>
+<tr>
+<td>Mybatis</td>
+<td>用于操作数据库的框架</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/16/Web%E5%89%8D%E7%AB%AF/" data-id="clhpmzlob0000no8a5uul5sp6" data-title="Web前端" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-3-Arrays-Lambda-正则" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/16/3-Arrays-Lambda-%E6%AD%A3%E5%88%99/" class="article-date">
+  <time class="dt-published" datetime="2023-05-16T00:43:10.000Z" itemprop="datePublished">2023-05-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaSE/">JavaSE</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/16/3-Arrays-Lambda-%E6%AD%A3%E5%88%99/">Arrays,Lambda,正则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-Arrays"><a href="#1-Arrays" class="headerlink" title="1.Arrays"></a>1.Arrays</h1><h2 id="1-1-Arrays使用方法"><a href="#1-1-Arrays使用方法" class="headerlink" title="1.1.Arrays使用方法"></a>1.1.Arrays使用方法</h2><p>静态方法:</p>
+<ul>
+<li>toString</li>
+<li>copyOfRange(类型[]arr, 起始索引, 结束索引)</li>
+<li>copyOf(类型[]arr, int newLength)</li>
+<li>setAll</li>
+<li>sort</li>
+</ul>
+<h2 id="1-2-Arrays操作对象数组"><a href="#1-2-Arrays操作对象数组" class="headerlink" title="1.2.Arrays操作对象数组"></a>1.2.Arrays操作对象数组</h2><p>实现方式:</p>
+<ol>
+<li><p>让对象类实现Comparable&lt;对象&gt;,重载compareTo方法,</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(Student o)</span> &#123;</span><br><span class="line">      <span class="comment">// 约定1：认为左边对象 大于 右边对象 请您返回正整数</span></span><br><span class="line">      <span class="comment">// 约定2：认为左边对象 小于 右边对象 请您返回负整数</span></span><br><span class="line">      <span class="comment">// 约定3：认为左边对象 等于 右边对象 请您一定返回0</span></span><br><span class="line"><span class="comment">/* if(this.age &gt; o.age)&#123;</span></span><br><span class="line"><span class="comment">          return 1;</span></span><br><span class="line"><span class="comment">      &#125;else if(this.age &lt; o.age)&#123;</span></span><br><span class="line"><span class="comment">          return -1;</span></span><br><span class="line"><span class="comment">      &#125;</span></span><br><span class="line"><span class="comment">      return 0;*/</span></span><br><span class="line">   </span><br><span class="line">      <span class="comment">//上面的if语句，也可以简化为下面的一行代码</span></span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">this</span>.age - o.age; <span class="comment">// 按照年龄升序排列</span></span><br><span class="line">      <span class="comment">// return o.age - this.age; // 按照年龄降序排列</span></span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>Arrays.sort(数组, Comparator比较器)</p>
+</li>
+</ol>
+<h1 id="2-Lambda"><a href="#2-Lambda" class="headerlink" title="2.Lambda"></a>2.Lambda</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/16/3-Arrays-Lambda-%E6%AD%A3%E5%88%99/" data-id="clhpkbeo10001o48aen0qeq2r" data-title="Arrays,Lambda,正则" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-常用API" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/15/%E5%B8%B8%E7%94%A8API/" class="article-date">
+  <time class="dt-published" datetime="2023-05-15T08:35:46.000Z" itemprop="datePublished">2023-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/15/%E5%B8%B8%E7%94%A8API/">常用API</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-StringBuilder"><a href="#1-StringBuilder" class="headerlink" title="1.StringBuilder"></a>1.StringBuilder</h1><h2 id="1-1-方法"><a href="#1-1-方法" class="headerlink" title="1.1.方法"></a>1.1.方法</h2><ul>
+<li>append() ,支持链式编程</li>
+<li>reverse()</li>
+<li>length()</li>
+<li>toString()</li>
+</ul>
+<h2 id="1-2-比String直接拼接速度快"><a href="#1-2-比String直接拼接速度快" class="headerlink" title="1.2.比String直接拼接速度快"></a>1.2.比String直接拼接速度快</h2><p>操作字符串拼接都是在一个对象中, 提高效率,不会浪费对象</p>
+<h1 id="2-StringJoiner"><a href="#2-StringJoiner" class="headerlink" title="2.StringJoiner"></a>2.StringJoiner</h1><h2 id="2-1-方法"><a href="#2-1-方法" class="headerlink" title="2.1.方法"></a>2.1.方法</h2><ul>
+<li>add()</li>
+<li>toString()</li>
+</ul>
+<h1 id="3-Math"><a href="#3-Math" class="headerlink" title="3.Math"></a>3.Math</h1><h2 id="3-1-方法"><a href="#3-1-方法" class="headerlink" title="3.1.方法"></a>3.1.方法</h2><ul>
+<li>abs</li>
+<li>ceil</li>
+<li>floor</li>
+<li>round</li>
+<li>max</li>
+<li>min</li>
+<li>pow</li>
+<li>random : 取随机数 [0.0, 1.0)</li>
+</ul>
+<h1 id="4-System"><a href="#4-System" class="headerlink" title="4.System"></a>4.System</h1><h2 id="4-1-方法"><a href="#4-1-方法" class="headerlink" title="4.1.方法"></a>4.1.方法</h2><ul>
+<li>exit</li>
+<li>currentTimeMillis</li>
+</ul>
+<h1 id="5-Runtime"><a href="#5-Runtime" class="headerlink" title="5.Runtime"></a>5.Runtime</h1><p>5.1.方法</p>
+<ul>
+<li>getRuntime</li>
+<li>availableProcessors</li>
+<li>totalMemory</li>
+<li>freeMemory</li>
+<li>exec</li>
+</ul>
+<h1 id="6-BigDecimal"><a href="#6-BigDecimal" class="headerlink" title="6.BigDecimal"></a>6.BigDecimal</h1><h2 id="6-1-方法"><a href="#6-1-方法" class="headerlink" title="6.1.方法"></a>6.1.方法</h2><ul>
+<li>BigDecimal(double)</li>
+<li>BigDecimal(String)</li>
+<li>static BigDecimal valueOf(double)</li>
+<li>add</li>
+<li>subtract</li>
+<li>multiply</li>
+<li>devide</li>
+<li>divide</li>
+<li>doubleValue</li>
+</ul>
+<h1 id="7-Date"><a href="#7-Date" class="headerlink" title="7.Date"></a>7.Date</h1><h2 id="6-1-方法-1"><a href="#6-1-方法-1" class="headerlink" title="6.1.方法"></a>6.1.方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test1Date</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 目标：掌握Date日期类的使用。</span></span><br><span class="line">        <span class="comment">// 1、创建一个Date的对象：代表系统当前时间信息的。</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        System.out.println(d);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、拿到时间毫秒值。</span></span><br><span class="line">        <span class="type">long</span> <span class="variable">time</span> <span class="operator">=</span> d.getTime();</span><br><span class="line">        System.out.println(time);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 3、把时间毫秒值转换成日期对象： 2s之后的时间是多少。</span></span><br><span class="line">        time += <span class="number">2</span> * <span class="number">1000</span>;</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>(time);</span><br><span class="line">        System.out.println(d2);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 4、直接把日期对象的时间通过setTime方法进行修改</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">d3</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        d3.setTime(time);</span><br><span class="line">        System.out.println(d3);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="8-SimpleDateFormat"><a href="#8-SimpleDateFormat" class="headerlink" title="8.SimpleDateFormat"></a>8.SimpleDateFormat</h1><h2 id="8-1-方法"><a href="#8-1-方法" class="headerlink" title="8.1.方法"></a>8.1.方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">字母	   表示含义</span><br><span class="line">yyyy	年</span><br><span class="line">MM		月</span><br><span class="line">dd		日</span><br><span class="line">HH		时</span><br><span class="line">mm		分</span><br><span class="line">ss		秒</span><br><span class="line">SSS		毫秒</span><br><span class="line"></span><br><span class="line"><span class="string">&quot;2022年12月12日&quot;</span> 的格式是 <span class="string">&quot;yyyy年MM月dd日&quot;</span></span><br><span class="line"><span class="string">&quot;2022-12-12 12:12:12&quot;</span> 的格式是 <span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span></span><br><span class="line">按照上面的格式可以任意拼接，但是字母不能写错</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Test2SimpleDateFormat</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException &#123;</span><br><span class="line">        <span class="comment">// 目标：掌握SimpleDateFormat的使用。</span></span><br><span class="line">        <span class="comment">// 1、准备一些时间</span></span><br><span class="line">        <span class="type">Date</span> <span class="variable">d</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">        System.out.println(d);</span><br><span class="line"></span><br><span class="line">        <span class="type">long</span> <span class="variable">time</span> <span class="operator">=</span> d.getTime();</span><br><span class="line">        System.out.println(time);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 2、格式化日期对象，和时间 毫秒值。</span></span><br><span class="line">        <span class="type">SimpleDateFormat</span> <span class="variable">sdf</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy年MM月dd日 HH:mm:ss EEE a&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="type">String</span> <span class="variable">rs</span> <span class="operator">=</span> sdf.format(d);</span><br><span class="line">        <span class="type">String</span> <span class="variable">rs2</span> <span class="operator">=</span> sdf.format(time);</span><br><span class="line">        System.out.println(rs);</span><br><span class="line">        System.out.println(rs2);</span><br><span class="line">        System.out.println(<span class="string">&quot;----------------------------------------------&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 目标：掌握SimpleDateFormat解析字符串时间 成为日期对象。</span></span><br><span class="line">        <span class="type">String</span> <span class="variable">dateStr</span> <span class="operator">=</span> <span class="string">&quot;2022-12-12 12:12:11&quot;</span>;</span><br><span class="line">        <span class="comment">// 1、创建简单日期格式化对象 , 指定的时间格式必须与被解析的时间格式一模一样，否则程序会出bug.</span></span><br><span class="line">        <span class="type">SimpleDateFormat</span> <span class="variable">sdf2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SimpleDateFormat</span>(<span class="string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);</span><br><span class="line">        <span class="type">Date</span> <span class="variable">d2</span> <span class="operator">=</span> sdf2.parse(dateStr);</span><br><span class="line">        System.out.println(d2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="9-Callender"><a href="#9-Callender" class="headerlink" title="9.Callender"></a>9.Callender</h1><p>9.1.方法</p>
+<ul>
+<li>static getInstance</li>
+<li>get</li>
+<li>getTime</li>
+<li>getTimeInMillis</li>
+<li>set</li>
+<li>add</li>
+</ul>
+<h1 id="10-JDK8日期-时间-日期时间"><a href="#10-JDK8日期-时间-日期时间" class="headerlink" title="10.JDK8日期,时间,日期时间"></a>10.JDK8日期,时间,日期时间</h1><h2 id="10-1-LocalDate-LocalTime-LocalDateTime"><a href="#10-1-LocalDate-LocalTime-LocalDateTime" class="headerlink" title="10.1.LocalDate,LocalTime,LocalDateTime"></a>10.1.LocalDate,LocalTime,LocalDateTime</h2><p>方法:</p>
+<ol>
+<li>修改 with+</li>
+<li>增加 plus+</li>
+<li>减少 minus+</li>
+<li>获得 get+</li>
+<li>判断 equals isAfter isBefore</li>
+</ol>
+<h2 id="10-2-ZoneId-ZonedDateTime"><a href="#10-2-ZoneId-ZonedDateTime" class="headerlink" title="10.2.ZoneId,ZonedDateTime"></a>10.2.ZoneId,ZonedDateTime</h2><p>方法:</p>
+<ul>
+<li>static systemDefault()</li>
+<li>getAvailableZoneIds()</li>
+<li>static ZonedDateTime()</li>
+</ul>
+<h2 id="10-3-Instant"><a href="#10-3-Instant" class="headerlink" title="10.3.Instant"></a>10.3.Instant</h2><p>用来代替Date成为一个时间戳</p>
+<p>方法:</p>
+<ul>
+<li>static now</li>
+</ul>
+<h2 id="10-4-DateTimeFormat"><a href="#10-4-DateTimeFormat" class="headerlink" title="10.4.DateTimeFormat"></a>10.4.DateTimeFormat</h2><p>方法:</p>
+<ul>
+<li>static ofPattern</li>
+<li>format</li>
+</ul>
+<p>LDT的相关方法:</p>
+<p>format</p>
+<p>static parse(CharSequence text, DateTimeFormatter formatter)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">DateTimeFormatter</span> <span class="variable">formatter</span> <span class="operator">=</span> DateTimeFormatter.ofPattern(<span class="string">&quot;yyyy年MM月dd日 HH:mm:ss&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-5-Period-Duration"><a href="#10-5-Period-Duration" class="headerlink" title="10.5.Period,Duration"></a>10.5.Period,Duration</h2><p>Period用来计算两个LD对象之间的间隔</p>
+<ul>
+<li>static Period between(LD start, LD end)</li>
+<li>getYears</li>
+<li>getMonths</li>
+<li>getDays</li>
+</ul>
+<p>Duration用来计算两个LD, LDT, Instance 的时间距离</p>
+<ul>
+<li>static Duration between(E start, E end)</li>
+<li>toDays</li>
+<li>toHours</li>
+<li>toMinutes</li>
+<li>toSeconds</li>
+<li>toMillis</li>
+<li>toNanos</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/15/%E5%B8%B8%E7%94%A8API/" data-id="clhpjsl210000y88agngoc6xe" data-title="常用API" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-2-内部类-枚举-泛型" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/15/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/" class="article-date">
+  <time class="dt-published" datetime="2023-05-15T06:39:44.000Z" itemprop="datePublished">2023-05-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaSE/">JavaSE</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/15/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/">内部类,枚举,泛型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-内部类"><a href="#1-内部类" class="headerlink" title="1.内部类"></a>1.内部类</h1><h2 id="1-1-成员内部类"><a href="#1-1-成员内部类" class="headerlink" title="1.1.成员内部类"></a>1.1.成员内部类</h2><p>内部类作为外部类的一个成员,内部类可以访问自己类和内部类的成员,在企业开发中经常作为核心代码书写区域.</p>
+<h3 id="1-1-1-注意事项"><a href="#1-1-1-注意事项" class="headerlink" title="1.1.1.注意事项"></a>1.1.1.注意事项</h3><ol>
+<li><p>创建对象</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//外部类.内部类 变量名 = new 外部类().new 内部类();</span></span><br><span class="line">Outer.<span class="type">Inner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>().<span class="keyword">new</span> <span class="title class_">Inner</span>();</span><br><span class="line"><span class="comment">//调用内部类的方法</span></span><br><span class="line">in.test();</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>访问同名成员的时候</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用类名.<span class="built_in">this</span>.成员来调用内部类成员</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="1-2-静态内部类"><a href="#1-2-静态内部类" class="headerlink" title="1.2.静态内部类"></a>1.2.静态内部类</h2><p>用来进行测试</p>
+<h3 id="1-2-1-注意事项"><a href="#1-2-1-注意事项" class="headerlink" title="1.2.1.注意事项"></a>1.2.1.注意事项</h3><ol>
+<li><p>无法访问外部类非静态对象</p>
+</li>
+<li><p>创建对象的时候</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//格式：外部类.内部类 变量名 = new 外部类.内部类();</span></span><br><span class="line">Outer.<span class="type">Inner</span> <span class="variable">in</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Outer</span>.Inner();</span><br><span class="line">in.test();</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="1-3-局部内部类"><a href="#1-3-局部内部类" class="headerlink" title="1.3.局部内部类"></a>1.3.局部内部类</h2><p>定义在方法中的内部类,一般在开发中不用</p>
+<h2 id="1-4-匿名内部类"><a href="#1-4-匿名内部类" class="headerlink" title="1.4.匿名内部类"></a>1.4.匿名内部类</h2><h3 id="1-4-1-创建格式"><a href="#1-4-1-创建格式" class="headerlink" title="1.4.1.创建格式"></a>1.4.1.创建格式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> 父类/接口(参数值)&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    重写父类/接口的方法;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-2-应用场景"><a href="#1-4-2-应用场景" class="headerlink" title="1.4.2.应用场景"></a>1.4.2.应用场景</h3><p>调用方法,方法的参数是一个接口或者抽象类</p>
+<h3 id="1-4-3-注意事项"><a href="#1-4-3-注意事项" class="headerlink" title="1.4.3.注意事项"></a>1.4.3.注意事项</h3><ul>
+<li>编译的时候系统自动产生字节码文件,外部类$1.class的方式命名</li>
+</ul>
+<h1 id="2-枚举"><a href="#2-枚举" class="headerlink" title="2.枚举"></a>2.枚举</h1><h2 id="2-1-创建格式"><a href="#2-1-创建格式" class="headerlink" title="2.1.创建格式"></a>2.1.创建格式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> 枚举类名&#123;</span><br><span class="line">    枚举项<span class="number">1</span>,枚举项<span class="number">2</span>,枚举项<span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>获取的时候使用类名就可以</li>
+</ul>
+<h2 id="2-2-应用场景"><a href="#2-2-应用场景" class="headerlink" title="2.2.应用场景"></a>2.2.应用场景</h2><ul>
+<li>控制输入的参数类型</li>
+</ul>
+<h1 id="3-泛型"><a href="#3-泛型" class="headerlink" title="3.泛型"></a>3.泛型</h1><h2 id="3-1-自定义泛型类"><a href="#3-1-自定义泛型类" class="headerlink" title="3.1.自定义泛型类"></a>3.1.自定义泛型类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//这里的&lt;T,W&gt;其实指的就是类型变量，可以是一个，也可以是多个。</span></span><br><span class="line"><span class="keyword">public</span> class 类名&lt;T,W&gt;&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-2-自定义泛型接口"><a href="#3-2-自定义泛型接口" class="headerlink" title="3.2.自定义泛型接口"></a>3.2.自定义泛型接口</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//这里的类型变量，一般是一个字母，比如&lt;E&gt;</span><br><span class="line">public interface 接口名&lt;类型变量&gt;&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-3-泛型方法"><a href="#3-3-泛型方法" class="headerlink" title="3.3.泛型方法"></a>3.3.泛型方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> &lt;泛型变量,泛型变量&gt; 返回值类型 方法名(形参列表)&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-4-泛型限定"><a href="#3-4-泛型限定" class="headerlink" title="3.4.泛型限定"></a>3.4.泛型限定</h2><ul>
+<li><?> 表示任意类型</li>
+<li><? extends 数据类型> 表示指定类型或者指定类型的子类</li>
+<li><? super 数据类型> 表示指定类型或者指定类型的父类</li>
+</ul>
+<h2 id="3-5-泛型擦除"><a href="#3-5-泛型擦除" class="headerlink" title="3.5.泛型擦除"></a>3.5.泛型擦除</h2><p>泛型只在编译阶段有效,在.class文件中不包含泛型</p>
+<h2 id="3-6-泛型好处"><a href="#3-6-泛型好处" class="headerlink" title="3.6.泛型好处"></a>3.6.泛型好处</h2><ul>
+<li><strong>泛型的好处：在编译阶段可以避免出现一些非法的数据。</strong></li>
+<li><strong>泛型的本质：把具体的数据类型传递给类型变量。</strong></li>
+</ul>
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/15/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/" data-id="clhpkbenx0000o48a6n5zd8td" data-title="内部类,枚举,泛型" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-标准模板" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/15/%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/" class="article-date">
   <time class="dt-published" datetime="2023-05-15T02:35:16.000Z" itemprop="datePublished">2023-05-15</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaSE/">JavaSE</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -105,7 +502,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/15/%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/" data-id="clho8g2zs0000es8a3db65901" data-title="标准模板" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/05/15/%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/" data-id="clhpjsl240001y88a3r675pm6" data-title="标准模板" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -117,12 +514,16 @@
 
 
   
-    <article id="post-test" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-1-静态-继承-多态-抽象和接口" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/05/14/test/" class="article-date">
+    <a href="/2023/05/14/1-%E9%9D%99%E6%80%81-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81-%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="article-date">
   <time class="dt-published" datetime="2023-05-14T10:07:09.000Z" itemprop="datePublished">2023-05-14</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaSE/">JavaSE</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
@@ -131,7 +532,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/14/test/">test</a>
+      <a class="p-name article-title" href="/2023/05/14/1-%E9%9D%99%E6%80%81-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81-%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8E%A5%E5%8F%A3/">静态,继承,多态,抽象和接口</a>
     </h1>
   
 
@@ -139,70 +540,124 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>##第一个笔记</p>
+        <h1 id="1-静态"><a href="#1-静态" class="headerlink" title="1.静态"></a>1.静态</h1><h2 id="1-1static修饰成员变量"><a href="#1-1static修饰成员变量" class="headerlink" title="1.1static修饰成员变量"></a>1.1static修饰成员变量</h2><h2 id="1-2-static修饰成员方法"><a href="#1-2-static修饰成员方法" class="headerlink" title="1.2.static修饰成员方法"></a>1.2.static修饰成员方法</h2><h2 id="1-3-static修饰代码块"><a href="#1-3-static修饰代码块" class="headerlink" title="1.3.static修饰代码块"></a>1.3.static修饰代码块</h2><h2 id="1-4-注意事项"><a href="#1-4-注意事项" class="headerlink" title="1.4.注意事项"></a>1.4.注意事项</h2><ul>
+<li>static修饰的方法没法访问普通成员变量</li>
+<li>工具类,单例设计模式</li>
+</ul>
 <hr>
-<p>#第二章</p>
+<h1 id="2-继承"><a href="#2-继承" class="headerlink" title="2.继承"></a>2.继承</h1><h2 id="2-1-继承的优点"><a href="#2-1-继承的优点" class="headerlink" title="2.1.继承的优点"></a>2.1.继承的优点</h2><ul>
+<li>提高代码复用性</li>
+</ul>
+<h2 id="2-2-权限修饰符"><a href="#2-2-权限修饰符" class="headerlink" title="2.2.权限修饰符"></a>2.2.权限修饰符</h2><table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>在本类中</th>
+<th>同包的其他类</th>
+<th>任意包子类</th>
+<th>任意包任意类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>√</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>缺省</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>protected</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+<tr>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<ul>
+<li>仅支持单继承,多层继承.</li>
+</ul>
+<h2 id="2-3-方法重写"><a href="#2-3-方法重写" class="headerlink" title="2.3.方法重写"></a>2.3.方法重写</h2><ul>
+<li>访问尊重就近原则:子类-&gt;父类</li>
+</ul>
+<h2 id="2-4-成员覆盖"><a href="#2-4-成员覆盖" class="headerlink" title="2.4.成员覆盖"></a>2.4.成员覆盖</h2><ul>
+<li>访问尊重就近原则:子类-&gt;父类</li>
+</ul>
+<h2 id="2-5-构造器"><a href="#2-5-构造器" class="headerlink" title="2.5.构造器"></a>2.5.构造器</h2><ul>
+<li>子类的构造第一行会执行父类构造super()</li>
+<li>super()只能写在第一行</li>
+</ul>
+<h1 id="3-多态"><a href="#3-多态" class="headerlink" title="3.多态"></a>3.多态</h1><h2 id="3-1-多态概念"><a href="#3-1-多态概念" class="headerlink" title="3.1.多态概念"></a>3.1.多态概念</h2><ul>
+<li>父类对象使用子类初始化,调用父类方法的时候使用子类的重写方法</li>
+</ul>
+<h2 id="3-2-多态的好处"><a href="#3-2-多态的好处" class="headerlink" title="3.2.多态的好处"></a>3.2.多态的好处</h2><ul>
+<li>代码解耦合</li>
+</ul>
+<blockquote>
+<p>1.耦合是指两个或两个以上的体系或两种运动形式间通过相互作用而彼此影响以至联合起来的现象。</p>
+<p>2、在软件工程中，对象之间的<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%80%A6%E5%90%88%E5%BA%A6&spm=1001.2101.3001.7020">耦合度</a>就是对象之间的依赖性。对象之间的耦合越高，维护成本越高，因此对象的设计应使类和构件之间的耦合最小。</p>
+<p>3、分类：有软硬件之间的耦合，还有软件各模块之间的耦合。<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E8%80%A6%E5%90%88%E6%80%A7&spm=1001.2101.3001.7020">耦合性</a>是程序结构中各个模块之间相互关联的度量。它取决于各个模块之间的接口的复杂程度、调用模块的方式以及哪些信息通过接口。</p>
+</blockquote>
+<h2 id="3-3-类型转换"><a href="#3-3-类型转换" class="headerlink" title="3.3.类型转换"></a>3.3.类型转换</h2><ul>
+<li>instanceof</li>
+</ul>
+<h1 id="4-抽象和接口"><a href="#4-抽象和接口" class="headerlink" title="4.抽象和接口"></a>4.抽象和接口</h1><h2 id="4-1-final"><a href="#4-1-final" class="headerlink" title="4.1.final"></a>4.1.final</h2><h3 id="4-1-1-final修饰范围特点"><a href="#4-1-1-final修饰范围特点" class="headerlink" title="4.1.1.final修饰范围特点"></a>4.1.1.final修饰范围特点</h3><ul>
+<li>可以修饰类,修饰方法,修饰变量</li>
+<li>修饰类不能被继承</li>
+<li>修饰方法不能被重写</li>
+<li>修饰变量只能被赋值一次</li>
+</ul>
+<h3 id="4-1-2-常量"><a href="#4-1-2-常量" class="headerlink" title="4.1.2.常量"></a>4.1.2.常量</h3><p>被static final修饰的成员变量是常量</p>
+<h2 id="4-2-抽象"><a href="#4-2-抽象" class="headerlink" title="4.2.抽象"></a>4.2.抽象</h2><h3 id="4-2-1-abstract"><a href="#4-2-1-abstract" class="headerlink" title="4.2.1.abstract"></a>4.2.1.abstract</h3><p>可以修饰类和方法</p>
+<ul>
+<li>抽象类不能创建对象(可以用他的子类创建对象)</li>
+<li>抽象类的实现子类必须重写所有抽象方法,不然子类也必须是抽象类</li>
+</ul>
+<h3 id="4-2-2抽象使用的方法和好处"><a href="#4-2-2抽象使用的方法和好处" class="headerlink" title="4.2.2抽象使用的方法和好处"></a>4.2.2抽象使用的方法和好处</h3><ol>
+<li>更好的支持多态</li>
+<li>在不知道具体业务实现的时候可以先定义抽象类用子类去实现,方便系统的扩展</li>
+</ol>
+<h3 id="4-2-3模板方法模式"><a href="#4-2-3模板方法模式" class="headerlink" title="4.2.3模板方法模式"></a>4.2.3模板方法模式</h3><p>抽取子类中相同的方法写道抽象类里面</p>
+<h2 id="4-3-接口"><a href="#4-3-接口" class="headerlink" title="4.3.接口"></a>4.3.接口</h2><p>特殊的抽象类,实现类的权限必须比接口大</p>
+<p>public &gt; default &gt; protected &gt; private</p>
+<h3 id="4-3-1接口的优点"><a href="#4-3-1接口的优点" class="headerlink" title="4.3.1接口的优点"></a>4.3.1接口的优点</h3><ul>
+<li>弥补了单继承,实现了多实现</li>
+<li>实现面向接口编程</li>
+</ul>
+<h3 id="4-3-2接口的JDK8新特性"><a href="#4-3-2接口的JDK8新特性" class="headerlink" title="4.3.2接口的JDK8新特性"></a>4.3.2接口的JDK8新特性</h3><ol>
+<li>default修饰的方法在接口里面实现,在子类</li>
+<li>可用private修饰方法,JDK9开始,用来减少接口的重复代码</li>
+<li>可以用static修饰方法,默认被public修饰</li>
+</ol>
+<h3 id="4-3-3接口实现的注意事项"><a href="#4-3-3接口实现的注意事项" class="headerlink" title="4.3.3接口实现的注意事项"></a>4.3.3接口实现的注意事项</h3><blockquote>
+<p>1.一个接口继承多个接口，如果多个接口中存在相同的方法声明，则此时不支持多继承</p>
+<p>2.一个类实现多个接口，如果多个接口中存在相同的方法声明，则此时不支持多实现</p>
+<p>3.一个类继承了父类，又同时实现了接口，父类中和接口中有同名的默认方法，实现类会有限使用父类的方法</p>
+<p>4.一个类实现类多个接口，多个接口中有同名的默认方法，则这个类必须重写该方法。</p>
+</blockquote>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/14/test/" data-id="clho8ac450000748ac2ny5xgq" data-title="test" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/05/14/1-%E9%9D%99%E6%80%81-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81-%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8E%A5%E5%8F%A3/" data-id="clhpkbeo30003o48acz4l8j3d" data-title="静态,继承,多态,抽象和接口" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/first/" rel="tag">first</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
 
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/05/14/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-05-14T09:57:20.872Z" itemprop="datePublished">2023-05-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/05/14/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/05/14/hello-world/" data-id="clho8ac4i0003748a6vsc77vy" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
-      
-      
-      
     </footer>
   </div>
   
@@ -218,13 +673,20 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE/">JavaSE</a></li></ul>
+    </div>
+  </div>
+
 
   
     
   <div class="widget-wrap">
     <h3 class="widget-title">标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/" rel="tag">first</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
     </div>
   </div>
 
@@ -234,7 +696,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/first/" style="font-size: 10px;">first</a>
+      <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" style="font-size: 20px;">基础阶段</a>
     </div>
   </div>
 
@@ -256,15 +718,23 @@
       <ul>
         
           <li>
+            <a href="/2023/05/16/Web%E5%89%8D%E7%AB%AF/">Web前端</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/16/3-Arrays-Lambda-%E6%AD%A3%E5%88%99/">Arrays,Lambda,正则</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/15/%E5%B8%B8%E7%94%A8API/">常用API</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/15/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/">内部类,枚举,泛型</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/15/%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF/">标准模板</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/14/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/14/hello-world/">Hello World</a>
           </li>
         
       </ul>
