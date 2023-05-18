@@ -14,7 +14,7 @@
 <meta property="og:description" content="1.Arrays1.1.Arrays使用方法静态方法:  toString copyOfRange(类型[]arr, 起始索引, 结束索引) copyOf(类型[]arr, int newLength) setAll sort  1.2.Arrays操作对象数组实现方式:  让对象类实现Comparable&lt;对象&gt;,重载compareTo方法, 12345678910111213141">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-16T00:43:10.000Z">
-<meta property="article:modified_time" content="2023-05-16T11:40:14.035Z">
+<meta property="article:modified_time" content="2023-05-18T01:59:30.784Z">
 <meta property="article:author" content="Kevin Yang">
 <meta property="article:tag" content="JavaSE">
 <meta property="article:tag" content="基础阶段">
@@ -143,68 +143,18 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">CreateCar</span>&#123;</span><br><span class="line">    Car <span class="title function_">create</span><span class="params">(String name, <span class="type">double</span> price)</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Test3</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">// 1、创建这个接口的匿名内部类对象。</span></span><br><span class="line">        <span class="type">CreateCar</span> <span class="variable">cc1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">CreateCar</span>()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> Car <span class="title function_">create</span><span class="params">(String name, <span class="type">double</span> price)</span> &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Car</span>(name, price);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">		<span class="comment">//2、使用匿名内部类改进</span></span><br><span class="line">        <span class="type">CreateCar</span> <span class="variable">cc2</span> <span class="operator">=</span> (name,  price) -&gt; <span class="keyword">new</span> <span class="title class_">Car</span>(name, price);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3、使用方法引用改进：构造器引用</span></span><br><span class="line">        <span class="type">CreateCar</span> <span class="variable">cc3</span> <span class="operator">=</span> Car::<span class="keyword">new</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">//注意：以上是创建CreateCar接口实现类对象的几种形式而已，语法一步一步简化。</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//4、对象调用方法</span></span><br><span class="line">        <span class="type">Car</span> <span class="variable">car</span> <span class="operator">=</span> cc3.create(<span class="string">&quot;奔驰&quot;</span>, <span class="number">49.9</span>);</span><br><span class="line">        System.out.println(car);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h1 id="4-可变参数"><a href="#4-可变参数" class="headerlink" title="4.可变参数"></a>4.可变参数</h1><blockquote>
+<ul>
+<li><strong>可变参数是一种特殊的形式参数，定义在方法、构造器的形参列表处，它可以让方法接收多个同类型的实际参数。</strong></li>
+<li><strong>可变参数在方法内部，本质上是一个数组</strong></li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>一个形参列表中，只能有一个可变参数；否则会报错</strong></li>
+<li><strong>一个形参列表中如果多个参数，可变参数需要写在最后；否则会报错</strong></li>
+</ul>
+</blockquote>
 
       
     </div>
