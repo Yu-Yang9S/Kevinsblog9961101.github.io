@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>HTML,CSS,JSON | 学习笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.概述1.1.前端web开发内容：   技术 描述    HTML 用于构建网站的基础结构的   css 用于美化页面的，作用和化妆或者整容作用一样   JavaScript 实现网页和用户的交互   Vue 主要用于将数据填充到html页面上的   Element 主要提供了一些非常美观的组件   Nginx 一款web服务器软件，可以用于部署我们的前端工程   1.2.后端web开发内容：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML,CSS,JSON">
+<meta property="og:url" content="http://example.com/2023/05/16/javaweb/HTML,CSS,JSON/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="1.概述1.1.前端web开发内容：   技术 描述    HTML 用于构建网站的基础结构的   css 用于美化页面的，作用和化妆或者整容作用一样   JavaScript 实现网页和用户的交互   Vue 主要用于将数据填充到html页面上的   Element 主要提供了一些非常美观的组件   Nginx 一款web服务器软件，可以用于部署我们的前端工程   1.2.后端web开发内容：">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2023/05/16/javaweb/HTML,CSS,JSON/%E5%9B%BE%E7%89%87">
+<meta property="article:published_time" content="2023-05-16T01:37:43.000Z">
+<meta property="article:modified_time" content="2023-05-22T07:24:28.124Z">
+<meta property="article:author" content="Kevin Yang">
+<meta property="article:tag" content="Web">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2023/05/16/javaweb/HTML,CSS,JSON/%E5%9B%BE%E7%89%87">
+  
+    <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">学习笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">从开始到放弃</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-javaweb/HTML,CSS,JSON" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/16/javaweb/HTML,CSS,JSON/" class="article-date">
+  <time class="dt-published" datetime="2023-05-16T01:37:43.000Z" itemprop="datePublished">2023-05-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      HTML,CSS,JSON
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-概述"><a href="#1-概述" class="headerlink" title="1.概述"></a>1.概述</h1><h2 id="1-1-前端web开发内容："><a href="#1-1-前端web开发内容：" class="headerlink" title="1.1.前端web开发内容："></a>1.1.前端web开发内容：</h2><table>
+<thead>
+<tr>
+<th>技术</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTML</td>
+<td align="center">用于构建网站的基础结构的</td>
+</tr>
+<tr>
+<td>css</td>
+<td align="center">用于美化页面的，作用和化妆或者整容作用一样</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td align="center">实现网页和用户的交互</td>
+</tr>
+<tr>
+<td>Vue</td>
+<td align="center">主要用于将数据填充到html页面上的</td>
+</tr>
+<tr>
+<td>Element</td>
+<td align="center">主要提供了一些非常美观的组件</td>
+</tr>
+<tr>
+<td>Nginx</td>
+<td align="center">一款web服务器软件，可以用于部署我们的前端工程</td>
+</tr>
+</tbody></table>
+<h2 id="1-2-后端web开发内容："><a href="#1-2-后端web开发内容：" class="headerlink" title="1.2.后端web开发内容："></a>1.2.后端web开发内容：</h2><table>
+<thead>
+<tr>
+<th>技术</th>
+<th align="center">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Maven</td>
+<td align="center">一款java中用于管理项目的软件</td>
+</tr>
+<tr>
+<td>Mysql</td>
+<td align="center">最常用的一款数据库软件之一</td>
+</tr>
+<tr>
+<td>SpringBoot</td>
+<td align="center">spring家族的产品，当前最为主流的项目开发技术。</td>
+</tr>
+<tr>
+<td>Mybatis</td>
+<td align="center">用于操作数据库的框架</td>
+</tr>
+</tbody></table>
+<h1 id="1-HTML"><a href="#1-HTML" class="headerlink" title="1.HTML"></a>1.HTML</h1><h2 id="2-1-开始"><a href="#2-1-开始" class="headerlink" title="2.1.开始"></a>2.1.开始</h2><p>网页的基本结构</p>
+<ul>
+<li>文档类型声明&lt;!DOCTYPE&gt;标签</li>
+<li>文档标记<html>标签</li>
+<li>文档的头部<head>标签</li>
+<li>文档的主体<body>标签</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">title</span>&gt;</span> //这里是网页显示的名字</span><br><span class="line">            快速入门</span><br><span class="line">        <span class="tag">&lt;/<span class="name">title</span>&gt;</span>     </span><br><span class="line">    <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h1</span>&gt;</span>HTML HELLO<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;1.jpg&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;大马猴&quot;</span>&gt;</span> //图片显示</span><br><span class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>HTML中的标签特点</p>
+<ul>
+<li>HTML标签不区分大小写</li>
+<li>HTML标签的属性值，采用单引号、双引号都可以</li>
+<li>HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)</li>
+</ul>
+<h2 id="2-2-基础标签"><a href="#2-2-基础标签" class="headerlink" title="2.2.基础标签"></a>2.2.基础标签</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_53988377/article/details/125749338">常用html标签及其属性_html标签属性大全_猿究院Rice__Y的博客-CSDN博客</a></p>
+<h2 id="2-3-CSS"><a href="#2-3-CSS" class="headerlink" title="2.3.CSS"></a>2.3.CSS</h2><h3 id="2-3-1-CSS引入方式"><a href="#2-3-1-CSS引入方式" class="headerlink" title="2.3.1.CSS引入方式"></a>2.3.1.CSS引入方式</h3><p>具体有3种引入方式，语法如下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>语法描述</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>行内样式</td>
+<td>在标签内使用style属性，属性值是css属性键值对</td>
+<td>&lt;h1 style&#x3D;”xxx:xxx;”&gt;中国新闻网&lt;&#x2F;h1&gt;</td>
+</tr>
+<tr>
+<td>内嵌样式</td>
+<td>定义&lt;style&gt;标签，在标签内部定义css样式</td>
+<td>&lt;style&gt; h1 {…} &lt;&#x2F;style&gt;</td>
+</tr>
+<tr>
+<td>外联样式</td>
+<td>定义&lt;link&gt;标签，通过href属性引入外部css文件</td>
+<td>&lt;link rel&#x3D;”stylesheet” href&#x3D;”css&#x2F;news.css”&gt;</td>
+</tr>
+</tbody></table>
+<p>对于上述3种引入方式，企业开发的使用情况如下：</p>
+<ol>
+<li>内联样式会出现大量的代码冗余，不方便后期的维护，所以不常用。</li>
+<li>内部样式，通过定义css选择器，让样式作用于当前页面的指定的标签上。</li>
+<li>外部样式，html和css实现了完全的分离，企业开发常用方式。</li>
+</ol>
+<h3 id="2-3-2-颜色表示"><a href="#2-3-2-颜色表示" class="headerlink" title="2.3.2.颜色表示"></a>2.3.2.颜色表示</h3><p>在前端程序开发中，颜色的表示方式常见的有如下三种：</p>
+<table>
+<thead>
+<tr>
+<th><strong>表示方式</strong></th>
+<th><strong>表示含义</strong></th>
+<th><strong>取值</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关键字</td>
+<td>预定义的颜色名</td>
+<td>red、green、blue…</td>
+</tr>
+<tr>
+<td>rgb表示法</td>
+<td>红绿蓝三原色，每项取值范围：0-255</td>
+<td>rgb(0,0,0)、rgb(255,255,255)、rgb(255,0,0)</td>
+</tr>
+<tr>
+<td>十六进制表示法</td>
+<td>#开头，将数字转换成十六进制表示</td>
+<td>#000000、#ff0000、#cccccc，简写：#000、#ccc</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-3-CSS选择器"><a href="#2-3-3-CSS选择器" class="headerlink" title="2.3.3.CSS选择器"></a>2.3.3.CSS选择器</h3><ul>
+<li>元素选择器</li>
+<li>id选择器</li>
+<li>class选择器</li>
+</ul>
+<p><strong>1.元素（标签）选择器：</strong> </p>
+<ul>
+<li>选择器的名字必须是标签的名字</li>
+<li>作用：选择器中的样式会作用于所有同名的标签上</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">元素名称 &#123;</span><br><span class="line">    css样式名:css样式值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例子如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2.id选择器:**</p>
+<ul>
+<li>选择器的名字前面需要加上#</li>
+<li>作用：选择器中的样式会作用于指定id的标签上，而且有且只有一个标签（由于id是唯一的）</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#id属性值 &#123;</span><br><span class="line">    css样式名:css样式值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例子如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#did</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>3.类选择器：**</p>
+<ul>
+<li>选择器的名字前面需要加上 .</li>
+<li>作用：选择器中的样式会作用于所有class的属性值和该名字一样的标签上，可以是多个</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.class属性值 &#123;</span><br><span class="line">    css样式名:css样式值；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例子如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.cls</span>&#123;</span><br><span class="line">     <span class="attribute">color</span>: green;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>选择器发生冲突的时候, id选择器 &gt; 类选择器 &gt;元素选择器</p>
+<h3 id="2-3-4-标签"><a href="#2-3-4-标签" class="headerlink" title="2.3.4.标签"></a>2.3.4.标签</h3><ol>
+<li><p>h类</p>
+<head>
+    <h1~h6></h1~h6>
+    <p>这是一个段落</p>
+    <em>这是一个倾斜标签</em>
+    <strong>这是一个粗体标签</strong>
+    <br>换行标签
+    <img src="图片" alt="photo" title="photos" width="x" height="y" />
+    <hr>
+</head>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    &lt;h1~h6&gt;第一级到第六级的标题&lt;/h1~h6&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">em</span>&gt;</span>这是一个倾斜标签<span class="tag">&lt;/<span class="name">em</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">strong</span>&gt;</span>这是一个粗体标签<span class="tag">&lt;/<span class="name">strong</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">br</span>&gt;</span>换行标签</span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">hr</span> <span class="attr">横线分割</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>img</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;图片&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;photo&quot;</span> <span class="attr">title</span>=<span class="string">&quot;photos&quot;</span> <span class="attr">width</span>=<span class="string">&quot;x&quot;</span> <span class="attr">height</span>=<span class="string">&quot;y&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>audio,video</p>
+<ul>
+<li>视频标签: &lt;video&gt;<ul>
+<li>属性: <ul>
+<li>src: 规定视频的url</li>
+<li>controls: 显示播放控件</li>
+<li>width: 播放器的宽度</li>
+<li>height: 播放器的高度</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>音频标签: &lt;audio&gt;<ul>
+<li>属性:<ul>
+<li>src: 规定音频的url</li>
+<li>controls: 显示播放控件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>div span 用来装文字可以加很多文本样式</p>
+<table>
+<thead>
+<tr>
+<th>效果</th>
+<th>标签</th>
+<th>标签(强调)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>加粗</td>
+<td>b</td>
+<td>strong</td>
+</tr>
+<tr>
+<td>倾斜</td>
+<td>i</td>
+<td>em</td>
+</tr>
+<tr>
+<td>下划线</td>
+<td>u</td>
+<td>ins</td>
+</tr>
+<tr>
+<td>删除线</td>
+<td>s</td>
+<td>del</td>
+</tr>
+</tbody></table>
+<p>前面的标签 b、i、u、s 就仅仅是实现加粗、倾斜、下划线、删除线的效果，是没有强调语义的。 而后面的strong、em、ins、del在实现加粗、倾斜、下划线、删除线的效果的同时，还带有强调语义。</p>
+</li>
+</ol>
+<h3 id="2-3-5-超链接"><a href="#2-3-5-超链接" class="headerlink" title="2.3.5.超链接"></a>2.3.5.超链接</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- 标签: <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;...&quot;</span> <span class="attr">target</span>=<span class="string">&quot;...&quot;</span>&gt;</span>央视网<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">- 属性:</span><br><span class="line">  - href: 指定资源访问的url</span><br><span class="line">  - target: 指定在何处打开资源链接</span><br><span class="line">    - _self: 默认值，在当前页面打开</span><br><span class="line">    - _blank: 在空白页面打开</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-4-盒子布局"><a href="#2-4-盒子布局" class="headerlink" title="2.4.盒子布局"></a>2.4.盒子布局</h2><h3 id="2-4-1-盒子模型组成"><a href="#2-4-1-盒子模型组成" class="headerlink" title="2.4.1.盒子模型组成"></a>2.4.1.盒子模型组成</h3><ul>
+<li>content &gt; padding &gt; border &gt; margin</li>
+<li>内容区域 &gt; 内边距区域 &gt; 边框区域 &gt; 外边框区域</li>
+</ul>
+<h3 id="2-4-2-布局标签"><a href="#2-4-2-布局标签" class="headerlink" title="2.4.2.布局标签"></a>2.4.2.布局标签</h3><ul>
+<li>布局标签：实际开发网页中，会大量频繁的使用 div 和 span 这两个没有语义的布局标签。</li>
+<li>标签：<div> <span></li>
+<li>特点：<ul>
+<li>div标签：<ul>
+<li>一行只显示一个（独占一行）</li>
+<li>宽度默认是父元素的宽度，高度默认由内容撑开</li>
+<li>可以设置宽高（width、height）</li>
+</ul>
+</li>
+<li>span标签：<ul>
+<li>一行可以显示多个</li>
+<li>宽度和高度默认由内容撑开</li>
+<li>不可以设置宽高（width、height）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-5-表格"><a href="#2-5-表格" class="headerlink" title="2.5.表格"></a>2.5.表格</h2><ul>
+<li>table&gt; : 用于定义整个表格, 可以包裹多个 &lt;tr&gt;， 常用属性如下： <ul>
+<li>border：规定表格边框的宽度</li>
+<li>width：规定表格的宽度</li>
+<li>cellspacing: 规定单元之间的空间</li>
+</ul>
+</li>
+<li>&lt;tr&gt; : 表格的行，可以包裹多个 &lt;td&gt;  </li>
+<li>&lt;td&gt; : 表格单元格(普通)，可以包裹内容 , 如果是表头单元格，可以替换为 &lt;th&gt;</li>
+</ul>
+<p>表单中的所有表单项，要想能够正常的采集数据，在提交的时候能提交到服务端，表单项必须指定name属性。 否则，无法提交该表单项。</p>
+<h2 id="2-6-表单"><a href="#2-6-表单" class="headerlink" title="2.6.表单"></a>2.6.表单</h2><ul>
+<li><p><input>: 表单项 , 通过type属性控制输入形式。</p>
+<table>
+<thead>
+<tr>
+<th>type取值</th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>text</td>
+<td>默认值，定义单行的输入字段</td>
+</tr>
+<tr>
+<td>password</td>
+<td>定义密码字段</td>
+</tr>
+<tr>
+<td>radio</td>
+<td>定义单选按钮</td>
+</tr>
+<tr>
+<td>checkbox</td>
+<td>定义复选框</td>
+</tr>
+<tr>
+<td>file</td>
+<td>定义文件上传按钮</td>
+</tr>
+<tr>
+<td>date&#x2F;time&#x2F;datetime-local</td>
+<td>定义日期&#x2F;时间&#x2F;日期时间</td>
+</tr>
+<tr>
+<td>number</td>
+<td>定义数字输入框</td>
+</tr>
+<tr>
+<td>email</td>
+<td>定义邮件输入框</td>
+</tr>
+<tr>
+<td>hidden</td>
+<td>定义隐藏域</td>
+</tr>
+<tr>
+<td>submit &#x2F; reset &#x2F; button</td>
+<td>定义提交按钮 &#x2F; 重置按钮 &#x2F; 可点击按钮</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>&lt;select&gt;: 定义下拉列表, &lt;option&gt; 定义列表项</p>
+</li>
+<li><p>&lt;textarea&gt;: 文本域</p>
+</li>
+</ul>
+<h1 id="2-JS"><a href="#2-JS" class="headerlink" title="2.JS"></a>2.JS</h1><h2 id="2-1-引入方式"><a href="#2-1-引入方式" class="headerlink" title="2.1.引入方式"></a>2.1.引入方式</h2><ol>
+<li><p>在html中用&lt;script&gt;&lt;&#x2F;script&gt;包裹</p>
+</li>
+<li><p>外部定义</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/demo.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="2-2-基础语法"><a href="#2-2-基础语法" class="headerlink" title="2.2.基础语法"></a>2.2.基础语法</h2><h3 id="2-2-1书写语法"><a href="#2-2-1书写语法" class="headerlink" title="2.2.1书写语法"></a>2.2.1书写语法</h3><ul>
+<li>区分大小写：与 Java 一样，变量名、函数名以及其他一切东西都是区分大小写的</li>
+<li>每行结尾的分号可有可无</li>
+<li>大括号表示代码块</li>
+<li>注释：<ul>
+<li>单行注释：&#x2F;&#x2F; 注释内容</li>
+<li>多行注释：&#x2F;* 注释内容 *&#x2F;</li>
+</ul>
+</li>
+</ul>
+<p>我们需要借助js中3钟输出语句，来演示书写语法</p>
+<table>
+<thead>
+<tr>
+<th>api</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>window.alert()</td>
+<td>警告框</td>
+</tr>
+<tr>
+<td>document.write()</td>
+<td>在HTML 输出内容</td>
+</tr>
+<tr>
+<td>console.log()</td>
+<td>写入浏览器控制台</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-2-变量声明"><a href="#2-2-2-变量声明" class="headerlink" title="2.2.2.变量声明"></a>2.2.2.变量声明</h3><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>var</td>
+<td>早期ECMAScript5中用于变量声明的关键字</td>
+</tr>
+<tr>
+<td>let</td>
+<td>ECMAScript6中新增的用于变量声明的关键字，相比较var，let只在代码块内生效</td>
+</tr>
+<tr>
+<td>const</td>
+<td>声明常量的，常量一旦声明，不能修改</td>
+</tr>
+</tbody></table>
+<p>在js中声明变量还需要注意如下几点：</p>
+<ul>
+<li>JavaScript 是一门弱类型语言，变量可以存放不同类型的值 。</li>
+<li>变量名需要遵循如下规则：<ul>
+<li>组成字符可以是任何字母、数字、下划线（_）或美元符号（$）</li>
+<li>数字不能开头</li>
+<li>建议使用驼峰命名</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-2-3-数据类型和运算"><a href="#2-2-3-数据类型和运算" class="headerlink" title="2.2.3.数据类型和运算"></a>2.2.3.数据类型和运算</h3><table>
+<thead>
+<tr>
+<th>数据类型</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>number</td>
+<td>数字（整数、小数、NaN(Not a Number)）</td>
+</tr>
+<tr>
+<td>string</td>
+<td>字符串，单双引皆可</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>布尔。true，false</td>
+</tr>
+<tr>
+<td>null</td>
+<td>对象为空</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>当声明的变量未初始化时，该变量的默认值是 undefined</td>
+</tr>
+</tbody></table>
+<p>&#x3D;&#x3D; 会进行类型转换，&#x3D;&#x3D;&#x3D; 不会进行类型转换</p>
+<h3 id="2-2-4-函数"><a href="#2-2-4-函数" class="headerlink" title="2.2.4.函数"></a>2.2.4.函数</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function 函数名(参数<span class="number">1</span><span class="punctuation">,</span>参数<span class="number">2.</span>.)<span class="punctuation">&#123;</span></span><br><span class="line">    要执行的代码</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var functionName = function (参数<span class="number">1</span><span class="punctuation">,</span>参数<span class="number">2.</span>.)<span class="punctuation">&#123;</span>   </span><br><span class="line">	<span class="comment">//要执行的代码</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-对象"><a href="#2-3-对象" class="headerlink" title="2.3.对象"></a>2.3.对象</h2><h3 id="2-3-1-Array对象"><a href="#2-3-1-Array对象" class="headerlink" title="2.3.1.Array对象"></a>2.3.1.Array对象</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var 变量名 = new Array(元素列表); </span><br><span class="line"></span><br><span class="line">var 变量名 = <span class="punctuation">[</span> 元素列表 <span class="punctuation">]</span>; </span><br></pre></td></tr></table></figure>
+
+<p>属性：</p>
+<table>
+<thead>
+<tr>
+<th align="left">属性</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">length</td>
+<td align="left">设置或返回数组中元素的数量。</td>
+</tr>
+</tbody></table>
+<p>方法：</p>
+<table>
+<thead>
+<tr>
+<th align="left">方法方法</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">forEach()</td>
+<td align="left">遍历数组中的每个有值得元素，并调用一次传入的函数</td>
+</tr>
+<tr>
+<td align="left">push()</td>
+<td align="left">将新元素添加到数组的末尾，并返回新的长度</td>
+</tr>
+<tr>
+<td align="left">splice()</td>
+<td align="left">从数组中删除元素</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-2-String对象"><a href="#2-3-2-String对象" class="headerlink" title="2.3.2.String对象"></a>2.3.2.String对象</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var 变量名 = new String(<span class="string">&quot;…&quot;</span>) ; <span class="comment">//方式一</span></span><br><span class="line"></span><br><span class="line">var 变量名 = <span class="string">&quot;…&quot;</span> ; <span class="comment">//方式二</span></span><br></pre></td></tr></table></figure>
+
+<p>属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>length</td>
+<td>字符串的长度。</td>
+</tr>
+</tbody></table>
+<p>方法：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>charAt()</td>
+<td>返回在指定位置的字符。</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>检索字符串。</td>
+</tr>
+<tr>
+<td>trim()</td>
+<td>去除字符串两边的空格</td>
+</tr>
+<tr>
+<td>substring()</td>
+<td>提取字符串中两个指定的索引号之间的字符。</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-3-JSON对象"><a href="#2-3-3-JSON对象" class="headerlink" title="2.3.3.JSON对象"></a>2.3.3.JSON对象</h3><p>自定义对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var 对象名 = &#123;</span><br><span class="line">    属性名1: 属性值1, </span><br><span class="line">    属性名2: 属性值2,</span><br><span class="line">    属性名3: 属性值3,</span><br><span class="line">    函数名称: function(形参列表)&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>Json对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;key&quot;:value,</span><br><span class="line">    &quot;key&quot;:value,</span><br><span class="line">    &quot;key&quot;:value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = JSON.parse(jsonstr);</span><br><span class="line">alert(obj.name);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-4-BOM"><a href="#2-3-4-BOM" class="headerlink" title="2.3.4.BOM"></a>2.3.4.BOM</h3><p>BOM的全称是Browser Object Model</p>
+<p>BOM中提供了如下5个对象：</p>
+<table>
+<thead>
+<tr>
+<th align="left">对象名称</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Window</td>
+<td align="left">浏览器窗口对象</td>
+</tr>
+<tr>
+<td align="left">Navigator</td>
+<td align="left">浏览器对象</td>
+</tr>
+<tr>
+<td align="left">Screen</td>
+<td align="left">屏幕对象</td>
+</tr>
+<tr>
+<td align="left">History</td>
+<td align="left">历史记录对象</td>
+</tr>
+<tr>
+<td align="left">Location</td>
+<td align="left">d地址栏对象</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-5-window对象"><a href="#2-3-5-window对象" class="headerlink" title="2.3.5.window对象"></a>2.3.5.window对象</h3><p>window对象提供了获取其他BOM对象的属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>history</td>
+<td>用于获取history对象</td>
+</tr>
+<tr>
+<td>location</td>
+<td>用于获取location对象</td>
+</tr>
+<tr>
+<td>Navigator</td>
+<td>用于获取Navigator对象</td>
+</tr>
+<tr>
+<td>Screen</td>
+<td>用于获取Screen对象</td>
+</tr>
+</tbody></table>
+<p>window也提供了一些常用的函数，如下表格所示：</p>
+<table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>alert()</td>
+<td>显示带有一段消息和一个确认按钮的警告框。</td>
+</tr>
+<tr>
+<td>comfirm()</td>
+<td>显示带有一段消息以及确认按钮和取消按钮的对话框。</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td>按照指定的周期（以毫秒计）来调用函数或计算表达式。</td>
+</tr>
+<tr>
+<td>setTimeout()</td>
+<td>在指定的毫秒数后调用函数或计算表达式。</td>
+</tr>
+</tbody></table>
+<h3 id="2-3-6-Location对象"><a href="#2-3-6-Location对象" class="headerlink" title="2.3.6.Location对象"></a>2.3.6.Location对象</h3><h2 id="2-4-事件"><a href="#2-4-事件" class="headerlink" title="2.4.事件"></a>2.4.事件</h2><table>
+<thead>
+<tr>
+<th>事件属性名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onclick</td>
+<td>鼠标单击事件</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>元素失去焦点</td>
+</tr>
+<tr>
+<td>onfocus</td>
+<td>元素获得焦点</td>
+</tr>
+<tr>
+<td>onload</td>
+<td>某个页面或图像被完成加载</td>
+</tr>
+<tr>
+<td>onsubmit</td>
+<td>当表单提交时触发该事件</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标被移到某元素之上</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标从某元素移开</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/16/javaweb/HTML,CSS,JSON/" data-id="clhzvhywa000iro8a8oon44u8" data-title="HTML,CSS,JSON" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/" rel="tag">Web</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/5-File-IO/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          5-File,IO
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/3-Arrays-Lambda/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Arrays,Lambda</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE/">JavaSE</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" style="font-size: 15px;">基础阶段</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">junit-反射-注解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">线程池_网络编程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/javaweb/springboot%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">springboot请求响应</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javaweb/SpringBoot/">SpringBoot</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Kevin Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

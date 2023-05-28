@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>特殊文件 | 学习笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.属性文件1.1.意义更方便于数据的存取  后缀为.properties的文件，称之为属性文件，它可以很方便的存储一些类似于键值对的数据。经常当做软件的配置文件使用。 而xml文件能够表示更加复杂的数据关系，比如要表示多个用户的用户名、密码、家乡、性别等。在后面，也经常当做软件的配置文件使用。  1.2.属性文件特点 属性文件后缀以.properties结尾 属性文件里面的每一行都是一个键值对，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="特殊文件">
+<meta property="og:url" content="http://example.com/2023/05/23/javase%E5%9F%BA%E7%A1%80/%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="1.属性文件1.1.意义更方便于数据的存取  后缀为.properties的文件，称之为属性文件，它可以很方便的存储一些类似于键值对的数据。经常当做软件的配置文件使用。 而xml文件能够表示更加复杂的数据关系，比如要表示多个用户的用户名、密码、家乡、性别等。在后面，也经常当做软件的配置文件使用。  1.2.属性文件特点 属性文件后缀以.properties结尾 属性文件里面的每一行都是一个键值对，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-23T00:47:10.000Z">
+<meta property="article:modified_time" content="2023-05-23T06:05:13.008Z">
+<meta property="article:author" content="Kevin Yang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">学习笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">从开始到放弃</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-javase基础/特殊文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/23/javase%E5%9F%BA%E7%A1%80/%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6/" class="article-date">
+  <time class="dt-published" datetime="2023-05-23T00:47:10.000Z" itemprop="datePublished">2023-05-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      特殊文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-属性文件"><a href="#1-属性文件" class="headerlink" title="1.属性文件"></a>1.属性文件</h1><h2 id="1-1-意义"><a href="#1-1-意义" class="headerlink" title="1.1.意义"></a>1.1.意义</h2><p>更方便于数据的存取</p>
+<ul>
+<li>后缀为.properties的文件，称之为属性文件，它可以很方便的存储一些类似于键值对的数据。经常当做软件的配置文件使用。</li>
+<li>而xml文件能够表示更加复杂的数据关系，比如要表示多个用户的用户名、密码、家乡、性别等。在后面，也经常当做软件的配置文件使用。</li>
+</ul>
+<h2 id="1-2-属性文件特点"><a href="#1-2-属性文件特点" class="headerlink" title="1.2.属性文件特点"></a>1.2.属性文件特点</h2><ol>
+<li>属性文件后缀以<code>.properties</code>结尾</li>
+<li>属性文件里面的每一行都是一个键值对，键和值中间用&#x3D;隔开。比如: <code>admin=123456</code> </li>
+<li><code>#</code>表示这样是注释信息，是用来解释这一行配置是什么意思。</li>
+<li>每一行末尾不要习惯性加分号，以及空格等字符；不然会把分号，空格会当做值的一部分。</li>
+<li>键不能重复，值可以重复</li>
+</ol>
+<h2 id="1-3-读取方法"><a href="#1-3-读取方法" class="headerlink" title="1.3.读取方法"></a>1.3.读取方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Properties()</td>
+<td>构造</td>
+</tr>
+<tr>
+<td>public void load(InputStream is)</td>
+<td>读取键值对</td>
+</tr>
+<tr>
+<td>public void load(Reader reader)</td>
+<td>读取键值对</td>
+</tr>
+<tr>
+<td>public String getProperty</td>
+<td>类似get</td>
+</tr>
+<tr>
+<td>public Set<String> stringPropertyNames()</td>
+<td>类似keySet</td>
+</tr>
+</tbody></table>
+<h2 id="1-4-写入方法"><a href="#1-4-写入方法" class="headerlink" title="1.4.写入方法"></a>1.4.写入方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public Object setProperty(String key, String value)</td>
+<td>保存键值对数据</td>
+</tr>
+<tr>
+<td>public void store(OutputStream os, String comments)</td>
+<td>字节流</td>
+</tr>
+<tr>
+<td>public void store(Writer w, String comments)</td>
+<td>字符流</td>
+</tr>
+</tbody></table>
+<h1 id="2-XML文件"><a href="#2-XML文件" class="headerlink" title="2.XML文件"></a>2.XML文件</h1><h2 id="2-1-XML特点-x2F-语法"><a href="#2-1-XML特点-x2F-语法" class="headerlink" title="2.1.XML特点&#x2F;语法"></a>2.1.XML特点&#x2F;语法</h2><blockquote>
+<ul>
+<li>XML中的<code>&lt;标签名&gt;</code> 称为一个标签或者一个元素，一般是成对出现的。</li>
+<li>XML中的标签名可以自己定义（可扩展），但是必须要正确的嵌套</li>
+<li>XML中只能有一个根标签。</li>
+<li>XML标准中可以有属性</li>
+<li>XML必须第一行有一个文档声明，格式是固定的<code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</code></li>
+<li>XML文件必须是以.xml为后缀结尾</li>
+</ul>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;UTF-8&quot;</span> ?&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 注释：以上抬头声明必须放在第一行，必须有 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  根标签只能有一个 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">users</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">user</span> <span class="attr">id</span>=<span class="string">&quot;1&quot;</span> <span class="attr">desc</span>=<span class="string">&quot;第一个用户&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>张无忌<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>男<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">地址</span>&gt;</span>光明顶<span class="tag">&lt;/<span class="name">地址</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">password</span>&gt;</span>minmin<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">people</span>&gt;</span>很多人<span class="tag">&lt;/<span class="name">people</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">user</span> <span class="attr">id</span>=<span class="string">&quot;2&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>敏敏<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">sex</span>&gt;</span>女<span class="tag">&lt;/<span class="name">sex</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">地址</span>&gt;</span>光明顶<span class="tag">&lt;/<span class="name">地址</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">password</span>&gt;</span>wuji<span class="tag">&lt;/<span class="name">password</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">user</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">users</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">&amp;lt;</span>  表示 &lt;</span><br><span class="line"><span class="symbol">&amp;gt;</span>  表示 &gt;</span><br><span class="line"><span class="symbol">&amp;amp;</span> 表示 &amp;</span><br><span class="line"><span class="symbol">&amp;apos;</span> 表示 &#x27;</span><br><span class="line"><span class="symbol">&amp;quot;</span> 表示 &quot;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">data</span>&gt;</span> 3 <span class="symbol">&amp;lt;</span> 2 <span class="symbol">&amp;amp;</span><span class="symbol">&amp;amp;</span> 5 <span class="symbol">&amp;gt;</span> 4 <span class="tag">&lt;/<span class="name">data</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">data1</span>&gt;</span></span><br><span class="line">    &lt;![CDATA[</span><br><span class="line">   		3 &lt; 2 &amp;&amp; 5 &gt; 4</span><br><span class="line">    ]]&gt;</span><br><span class="line"><span class="tag">&lt;/<span class="name">data1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="2-2-XML解析"><a href="#2-2-XML解析" class="headerlink" title="2.2.XML解析"></a>2.2.XML解析</h2><h3 id="2-2-1-解析步骤1"><a href="#2-2-1-解析步骤1" class="headerlink" title="2.2.1.解析步骤1"></a>2.2.1.解析步骤1</h3><p>DOM4J:Dowument对象表示真个XML文档、Element对象表示标签（元素）、Attribute对象表示属性、标签中的内容就是文本</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public SAXReader()</td>
+<td>构造</td>
+</tr>
+<tr>
+<td>public Document read(String url)</td>
+<td>XML读成Document对象</td>
+</tr>
+<tr>
+<td>public Document read(InputStrream is)</td>
+<td>字节流读取</td>
+</tr>
+<tr>
+<td>Element getRootElement()</td>
+<td>获得根元素对象</td>
+</tr>
+</tbody></table>
+<p>从外层往里层解析</p>
+<h3 id="2-2-2-解析步骤2"><a href="#2-2-2-解析步骤2" class="headerlink" title="2.2.2.解析步骤2"></a>2.2.2.解析步骤2</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>public String getName()</td>
+<td>得到元素名字</td>
+</tr>
+<tr>
+<td>public List<Element> elements()</td>
+<td>获得所有子元素</td>
+</tr>
+<tr>
+<td>public List<Element> elements(String name)</td>
+<td>得到当前元素下指定子元素返回集合</td>
+</tr>
+<tr>
+<td>public Element elment(String name)</td>
+<td>得到指定名字的子元素</td>
+</tr>
+<tr>
+<td>public String attributeValue(String name)</td>
+<td>属性名得到属性值</td>
+</tr>
+<tr>
+<td>public String elementText(子元素名)</td>
+<td>得到特定名称的子元素文本</td>
+</tr>
+<tr>
+<td>public String getText()</td>
+<td>得到文本</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-3-XML文件写入"><a href="#2-2-3-XML文件写入" class="headerlink" title="2.2.3.XML文件写入"></a>2.2.3.XML文件写入</h3><p>使用StringBuilder按照标签的格式拼接，然后再使用BufferedWriter写到XML文件中去就可以了。</p>
+<h1 id="3-日志技术"><a href="#3-日志技术" class="headerlink" title="3.日志技术"></a>3.日志技术</h1><blockquote>
+<p>日志可以将系统执行的信息，方便的记录到指定位置，可以是控制台、可以是文件、可以是数据库中。</p>
+<p>日志可以随时以开关的形式控制启停，无需侵入到源代码中去修改。</p>
+</blockquote>
+<h2 id="3-1-Logback"><a href="#3-1-Logback" class="headerlink" title="3.1.Logback"></a>3.1.Logback</h2><h3 id="3-1-1-使用步骤"><a href="#3-1-1-使用步骤" class="headerlink" title="3.1.1.使用步骤"></a>3.1.1.使用步骤</h3><ol>
+<li>在资料中找到<code>slftj-api.jar、logback-core.jar、logback-classes.jar</code> 这三个jar包，复制一下</li>
+<li>在当前模块下面新建一个lib文件夹，把刚刚复制的三个jar包都粘贴到此处</li>
+<li>从资料中找到<code>logback.xml</code>配置文件，将此文件复制粘贴到src目录下（必须是src目录）</li>
+<li>然后就可以开始写代码了，在代码中创建一个日志记录日对象</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">LogBackTest</span> &#123;</span><br><span class="line">    <span class="comment">// 创建一个Logger日志对象</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="type">Logger</span> <span class="variable">LOGGER</span> <span class="operator">=</span> LoggerFactory.getLogger(<span class="string">&quot;LogBackTest&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="comment">//while (true) &#123;</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                LOGGER.info(<span class="string">&quot;chu法方法开始执行~~~&quot;</span>);</span><br><span class="line">                chu(<span class="number">10</span>, <span class="number">0</span>);</span><br><span class="line">                LOGGER.info(<span class="string">&quot;chu法方法执行成功~~~&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                LOGGER.error(<span class="string">&quot;chu法方法执行失败了，出现了bug~~~&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="comment">//&#125;</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">chu</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span>&#123;</span><br><span class="line">        LOGGER.debug(<span class="string">&quot;参数a:&quot;</span> + a);</span><br><span class="line">        LOGGER.debug(<span class="string">&quot;参数b:&quot;</span> + b);</span><br><span class="line">        <span class="type">int</span> <span class="variable">c</span> <span class="operator">=</span> a / b;</span><br><span class="line">        LOGGER.info(<span class="string">&quot;结果是：&quot;</span> + c);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-1-2-日志配置文件"><a href="#3-1-2-日志配置文件" class="headerlink" title="3.1.2.日志配置文件"></a>3.1.2.日志配置文件</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1. 可以配置日志输出的位置是文件、还是控制台</span><br><span class="line">2. 可以配置日志输出的格式</span><br><span class="line">3. 还可以配置日志关闭和开启、以及哪些日志输出哪些日志不输出。</span><br><span class="line">4. 可以配置日志级别</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/23/javase%E5%9F%BA%E7%A1%80/%E7%89%B9%E6%AE%8A%E6%96%87%E4%BB%B6/" data-id="clhzvhyw9000dro8a31vs2f9p" data-title="特殊文件" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/24/javaweb/SpringBoot/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          SpringBoot
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/23/javaweb/maven/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">maven</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE/">JavaSE</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" style="font-size: 15px;">基础阶段</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">junit-反射-注解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">线程池_网络编程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/javaweb/springboot%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">springboot请求响应</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javaweb/SpringBoot/">SpringBoot</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Kevin Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

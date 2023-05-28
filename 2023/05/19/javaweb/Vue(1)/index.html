@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Vue(1) | 学习笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.Vue概述1.1.一些概念1.2.1.MVVM Model: 数据模型，特指前端中通过请求从后台获取的数据 View: 视图，用于展示数据的页面，可以理解成我们的html+css搭建的页面，但是没有数据 ViewModel: 数据绑定到视图，负责将数据（Model）通过JavaScript的DOM技术，将数据展示到视图（View）上  1.2.2.Vue.jsVue.js（读音 &#x2F;v">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue(1)">
+<meta property="og:url" content="http://example.com/2023/05/19/javaweb/Vue(1)/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="1.Vue概述1.1.一些概念1.2.1.MVVM Model: 数据模型，特指前端中通过请求从后台获取的数据 View: 视图，用于展示数据的页面，可以理解成我们的html+css搭建的页面，但是没有数据 ViewModel: 数据绑定到视图，负责将数据（Model）通过JavaScript的DOM技术，将数据展示到视图（View）上  1.2.2.Vue.jsVue.js（读音 &#x2F;v">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-19T06:57:44.000Z">
+<meta property="article:modified_time" content="2023-05-22T10:24:21.112Z">
+<meta property="article:author" content="Kevin Yang">
+<meta property="article:tag" content="JavaWeb">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">学习笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">从开始到放弃</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-javaweb/Vue(1)" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/19/javaweb/Vue(1)/" class="article-date">
+  <time class="dt-published" datetime="2023-05-19T06:57:44.000Z" itemprop="datePublished">2023-05-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Vue(1)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-Vue概述"><a href="#1-Vue概述" class="headerlink" title="1.Vue概述"></a>1.Vue概述</h1><h2 id="1-1-一些概念"><a href="#1-1-一些概念" class="headerlink" title="1.1.一些概念"></a>1.1.一些概念</h2><h3 id="1-2-1-MVVM"><a href="#1-2-1-MVVM" class="headerlink" title="1.2.1.MVVM"></a>1.2.1.MVVM</h3><ul>
+<li>Model: 数据模型，特指前端中通过请求从后台获取的数据</li>
+<li>View: 视图，用于展示数据的页面，可以理解成我们的html+css搭建的页面，但是没有数据</li>
+<li>ViewModel: 数据绑定到视图，负责将数据（Model）通过JavaScript的DOM技术，将数据展示到视图（View）上</li>
+</ul>
+<h3 id="1-2-2-Vue-js"><a href="#1-2-2-Vue-js" class="headerlink" title="1.2.2.Vue.js"></a>1.2.2.Vue.js</h3><p>Vue.js（读音 &#x2F;vjuː&#x2F;, 类似于 <strong>view</strong>） 是一套构建用户界面的 <strong>渐进式框架</strong>。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，并且非常容易学习，非常容易与其它库或已有项目整合。Vue.js 的目标是通过尽可能简单的 API 实现<strong>响应的数据绑定</strong>和<strong>组合的视图组件</strong>。</p>
+<h2 id="1-2-创建Vue对象"><a href="#1-2-创建Vue对象" class="headerlink" title="1.2.创建Vue对象"></a>1.2.创建Vue对象</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="comment">//定义Vue对象</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">        el: <span class="string">&quot;#app&quot;</span>, <span class="comment">//vue接管区域</span></span><br><span class="line">        data:&#123;</span><br><span class="line">            message: <span class="string">&quot;Hello Vue&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在创建vue对象时，有几个常用的属性：</p>
+<ul>
+<li>el:  用来指定哪儿些标签受 Vue 管理。 该属性取值 <code>#app</code> 中的 <code>app</code> 需要是受管理的标签的id属性值</li>
+<li>data: 用来定义数据模型</li>
+<li>methods: 用来定义函数。这个我们在后面就会用到</li>
+</ul>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">在html区域编写视图，其中&#123;&#123;&#125;&#125;是插值表达式，用来将vue对象中定义的model展示到页面上的</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="1-3-Vue指令"><a href="#1-3-Vue指令" class="headerlink" title="1.3.Vue指令"></a>1.3.Vue指令</h2><p>如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th><strong>指令</strong></th>
+<th><strong>作用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>v-bind</td>
+<td>为HTML标签绑定属性值，如设置  href , css样式等</td>
+</tr>
+<tr>
+<td>v-model</td>
+<td>在表单元素上创建双向数据绑定</td>
+</tr>
+<tr>
+<td>v-on</td>
+<td>为HTML标签绑定事件</td>
+</tr>
+<tr>
+<td>v-if</td>
+<td>条件性的渲染某元素，判定为true时渲染,否则不渲染</td>
+</tr>
+<tr>
+<td>v-else</td>
+<td></td>
+</tr>
+<tr>
+<td>v-else-if</td>
+<td></td>
+</tr>
+<tr>
+<td>v-show</td>
+<td>根据条件展示某元素，区别在于切换的是display属性的值</td>
+</tr>
+<tr>
+<td>v-for</td>
+<td>列表渲染，遍历容器的元素或者对象的属性</td>
+</tr>
+</tbody></table>
+<h3 id="1-3-1-v-bind和v-model"><a href="#1-3-1-v-bind和v-model" class="headerlink" title="1.3.1.v-bind和v-model"></a>1.3.1.v-bind和v-model</h3><h3 id="1-3-2-v-on"><a href="#1-3-2-v-on" class="headerlink" title="1.3.2.v-on"></a>1.3.2.v-on</h3><h3 id="1-3-3-v-if-和v-show"><a href="#1-3-3-v-if-和v-show" class="headerlink" title="1.3.3.v-if 和v-show"></a>1.3.3.v-if 和v-show</h3><h3 id="1-3-4-v-for"><a href="#1-3-4-v-for" class="headerlink" title="1.3.4.v-for"></a>1.3.4.v-for</h3><h2 id="1-4-生命周期"><a href="#1-4-生命周期" class="headerlink" title="1.4.生命周期"></a>1.4.生命周期</h2><h1 id="2-Ajax"><a href="#2-Ajax" class="headerlink" title="2.Ajax"></a>2.Ajax</h1><h2 id="2-1-Ajax作用"><a href="#2-1-Ajax作用" class="headerlink" title="2.1.Ajax作用"></a>2.1.Ajax作用</h2><ul>
+<li>与服务器进行数据交换：通过Ajax可以给服务器发送请求，并获取服务器响应的数据。</li>
+<li>异步交互：可以在<strong>不重新加载整个页面</strong>的情况下，与服务器交换数据并<strong>更新部分网页</strong>的技术，如：搜索联想、用户名是否可用的校验等等。</li>
+</ul>
+<h1 id="3-Axios"><a href="#3-Axios" class="headerlink" title="3.Axios"></a>3.Axios</h1><p>Axios是对原生的AJAX进行封装，简化书写</p>
+<h2 id="3-1-使用方法"><a href="#3-1-使用方法" class="headerlink" title="3.1.使用方法"></a>3.1.使用方法</h2><ul>
+<li><p>引入axios</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;js/axios-0.18.0.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>发送 get 请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">    <span class="attr">method</span>:<span class="string">&quot;get&quot;</span>,</span><br><span class="line">    <span class="attr">url</span>:<span class="string">&quot;http://localhost:8080/ajax-demo1/aJAXDemo1?username=zhangsan&quot;</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">resp</span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(resp.<span class="property">data</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>发送 post 请求</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">    <span class="attr">method</span>:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">    <span class="attr">url</span>:<span class="string">&quot;http://localhost:8080/ajax-demo1/aJAXDemo1&quot;</span>,</span><br><span class="line">    <span class="attr">data</span>:<span class="string">&quot;username=zhangsan&quot;</span></span><br><span class="line">&#125;).<span class="title function_">then</span>(<span class="keyword">function</span> (<span class="params">resp</span>)&#123;</span><br><span class="line">    <span class="title function_">alert</span>(resp.<span class="property">data</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>method属性：用来设置请求方式的。取值为 get 或者 post。</p>
+</li>
+<li><p>url属性：用来书写请求的资源路径。如果是 get 请求，需要将请求参数拼接到路径的后面，格式为： url?参数名&#x3D;参数值&amp;参数名2&#x3D;参数值2。</p>
+</li>
+<li><p>data属性：作为请求体被发送的数据。也就是说如果是 post 请求的话，数据需要作为 data 属性的值。</p>
+</li>
+</ul>
+<p>then() 需要传递一个匿名函数。我们将 then()中传递的匿名函数称为 <strong>回调函数</strong>，意思是该匿名函数在发送请求时不会被调用，而是在成功响应后调用的函数。而该回调函数中的 resp 参数是对响应的数据进行封装的对象，通过 resp.data 可以获取到响应的数据。</p>
+<h2 id="3-2-Axios请求方法"><a href="#3-2-Axios请求方法" class="headerlink" title="3.2.Axios请求方法"></a>3.2.Axios请求方法</h2><p>Axios还针对不同的请求，提供了别名方式的api,具体如下：</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>axios.get(url [, config])</td>
+<td>发送get请求</td>
+</tr>
+<tr>
+<td>axios.delete(url [, config])</td>
+<td>发送delete请求</td>
+</tr>
+<tr>
+<td>axios.post(url [, data[, config]])</td>
+<td>发送post请求</td>
+</tr>
+<tr>
+<td>axios.put(url [, data[, config]])</td>
+<td>发送put请求</td>
+</tr>
+</tbody></table>
+<h1 id="4-YAPI"><a href="#4-YAPI" class="headerlink" title="4.YAPI"></a>4.YAPI</h1><p>甲方和产品经理沟通,产品经理整理出接口文档交给前端后端分别开发,电子接口文档可以用YAPI代劳</p>
+<h1 id="5-前端工程化"><a href="#5-前端工程化" class="headerlink" title="5.前端工程化"></a>5.前端工程化</h1><h2 id="5-1-概念"><a href="#5-1-概念" class="headerlink" title="5.1.概念"></a>5.1.概念</h2><p>使用搭好的框架进行快速开发</p>
+<h2 id="5-2-搭建环境"><a href="#5-2-搭建环境" class="headerlink" title="5.2.搭建环境"></a>5.2.搭建环境</h2><p>安装NodeJS和Vue-cli</p>
+<h2 id="5-3-创建项目"><a href="#5-3-创建项目" class="headerlink" title="5.3.创建项目"></a>5.3.创建项目</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue ui //进入图形界面</span><br></pre></td></tr></table></figure>
+
+<p>创建有路由的2.x,标准项目</p>
+<h2 id="5-4-目录结构"><a href="#5-4-目录结构" class="headerlink" title="5.4.目录结构"></a>5.4.目录结构</h2><table>
+<thead>
+<tr>
+<th>名字</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>node_modules</td>
+<td>依赖包</td>
+</tr>
+<tr>
+<td>public</td>
+<td>静态文件</td>
+</tr>
+<tr>
+<td>src</td>
+<td>存放源代码</td>
+</tr>
+<tr>
+<td>package.json</td>
+<td>模块基本信息</td>
+</tr>
+<tr>
+<td>vue.config.js</td>
+<td>保存vue配置版本号</td>
+</tr>
+</tbody></table>
+<h2 id="5-5-运行方式"><a href="#5-5-运行方式" class="headerlink" title="5.5.运行方式"></a>5.5.运行方式</h2><p>两种方式</p>
+<ol>
+<li>使用VSCode提供的图形化界面<br>打开npm设置:<br>设置&#x2F;用户设置&#x2F;扩展&#x2F;MPM<br>点击<strong>资源管理器处的3个小点</strong>，<strong>勾选npm脚本选项</strong></li>
+<li>命令行npm run serve</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/19/javaweb/Vue(1)/" data-id="clhzvhywb000kro8a46zpcf6s" data-title="Vue(1)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2023/05/22/javaweb/Vue(2)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          Vue(2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/4-%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">异常,集合</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE/">JavaSE</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" style="font-size: 15px;">基础阶段</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">junit-反射-注解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">线程池_网络编程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/javaweb/springboot%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">springboot请求响应</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javaweb/SpringBoot/">SpringBoot</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Kevin Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
