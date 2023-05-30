@@ -6,19 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>5-File,IO | 学习笔记</title>
+  <title>Tag: JavaSE | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.File类1.1.创建 File(path) File(parentPath,childPath) File(File Parent, String Child)  1.2. 方法   方法名字 说明    exists 路径文件存在   isFile 是文件   isDirectory 是文件夹   getName 返回包含后缀名字   length 返回文件大小   lastModifie">
-<meta property="og:type" content="article">
-<meta property="og:title" content="5-File,IO">
-<meta property="og:url" content="http://example.com/2023/05/16/javase%E5%9F%BA%E7%A1%80/5-File-IO/index.html">
+  <meta name="description" content="学习到JAVESE阶段">
+<meta property="og:type" content="website">
+<meta property="og:title" content="学习笔记">
+<meta property="og:url" content="http://example.com/tags/JavaSE/page/2/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="1.File类1.1.创建 File(path) File(parentPath,childPath) File(File Parent, String Child)  1.2. 方法   方法名字 说明    exists 路径文件存在   isFile 是文件   isDirectory 是文件夹   getName 返回包含后缀名字   length 返回文件大小   lastModifie">
+<meta property="og:description" content="学习到JAVESE阶段">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-16T11:40:52.000Z">
-<meta property="article:modified_time" content="2023-05-30T00:59:47.068Z">
 <meta property="article:author" content="Kevin Yang">
-<meta property="article:tag" content="JavaSE">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="学习笔记" type="application/atom+xml">
@@ -143,289 +140,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-javase基础/5-File-IO" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      5-File,IO
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2023" class="archive-year">2023</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/05/15/javase%E5%9F%BA%E7%A1%80/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/" class="archive-article-date">
+  	<time datetime="2023-05-15T06:39:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-15</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/05/15/javase%E5%9F%BA%E7%A1%80/2-%E5%86%85%E9%83%A8%E7%B1%BB-%E6%9E%9A%E4%B8%BE-%E6%B3%9B%E5%9E%8B/">内部类,枚举,泛型</a>
     </h1>
   
 
-        
-        <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/5-File-IO/" class="archive-article-date">
-  	<time datetime="2023-05-16T11:40:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="1-File类"><a href="#1-File类" class="headerlink" title="1.File类"></a>1.File类</h1><h2 id="1-1-创建"><a href="#1-1-创建" class="headerlink" title="1.1.创建"></a>1.1.创建</h2><ul>
-<li>File(path)</li>
-<li>File(parentPath,childPath)</li>
-<li>File(File Parent, String Child)</li>
-</ul>
-<h2 id="1-2-方法"><a href="#1-2-方法" class="headerlink" title="1.2. 方法"></a>1.2. 方法</h2><table>
-<thead>
-<tr>
-<th>方法名字</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>exists</td>
-<td>路径文件存在</td>
-</tr>
-<tr>
-<td>isFile</td>
-<td>是文件</td>
-</tr>
-<tr>
-<td>isDirectory</td>
-<td>是文件夹</td>
-</tr>
-<tr>
-<td>getName</td>
-<td>返回包含后缀名字</td>
-</tr>
-<tr>
-<td>length</td>
-<td>返回文件大小</td>
-</tr>
-<tr>
-<td>lastModified</td>
-<td>获得文件最后修改时间(Mills)</td>
-</tr>
-<tr>
-<td>getPath</td>
-<td>获得路径</td>
-</tr>
-<tr>
-<td>getAbsolutePath</td>
-<td>获得绝对路径</td>
-</tr>
-</tbody></table>
-<h2 id="1-3-创建和删除方法"><a href="#1-3-创建和删除方法" class="headerlink" title="1.3.创建和删除方法"></a>1.3.创建和删除方法</h2><table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>mkdirs</td>
-<td>创建多级目录</td>
-</tr>
-<tr>
-<td>mkdir</td>
-<td>创建单机目录</td>
-</tr>
-<tr>
-<td>delete</td>
-<td>删除文件和空文件夹</td>
-</tr>
-</tbody></table>
-<h1 id="2-字符集"><a href="#2-字符集" class="headerlink" title="2.字符集"></a>2.字符集</h1><h2 id="2-1-GBK"><a href="#2-1-GBK" class="headerlink" title="2.1.GBK"></a>2.1.GBK</h2><p><strong>GBK中一个汉字采用两个字节来存储</strong>，为了能够显示英文字母，GBK字符集也兼容了ASCII字符集，<strong>在GBK字符集中一个字母还是采用一个字节来存储</strong>。</p>
-<p><strong>当读取文件中的字符时，通过识别读取到的第1位是0还是1来判断是字母还是汉字</strong></p>
-<ul>
-<li>如果读取到第1位是0，就认为是一个字母，此时往后读1个字节。</li>
-<li>如果读取到第1位是1，就认为是一个汉字，此时往后读2个字节。</li>
-</ul>
-<h2 id="2-2-Unicode字符集"><a href="#2-2-Unicode字符集" class="headerlink" title="2.2.Unicode字符集"></a>2.2.Unicode字符集</h2><p>Unicode字符集中包含了世界上所有国家的文字，一个字符采用4个自己才存储。</p>
-<p>于是又对Unicode字符集中的字符进行了重新编码，一共设计了三种编码方案。分别是UTF-32、UTF-16、UTF-8;  <strong>其中比较常用的编码方案是UTF-8</strong></p>
-<p>下面我们详细介绍一下UTF-8这种编码方案的特点。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>UTF-<span class="number">8</span>是一种可变长的编码方案，工分为<span class="number">4</span>个长度区</span><br><span class="line"><span class="number">2.</span>英文字母、数字占<span class="number">1</span>个字节兼容(ASCII编码)</span><br><span class="line"><span class="number">3.</span>汉字字符占<span class="number">3</span>个字节</span><br><span class="line"><span class="number">4.</span>极少数字符占<span class="number">4</span>个字节</span><br></pre></td></tr></table></figure>
-
-<h1 id="3-IO流-字节流"><a href="#3-IO流-字节流" class="headerlink" title="3.IO流 - 字节流"></a>3.IO流 - 字节流</h1><p>对文件或者网络中的数据进行读、写的操作。</p>
-<p>IO流分为两大派系：</p>
-<ul>
-<li>字节流：字节流又分为字节输入流、字节输出流</li>
-<li>字符流：字符流由分为字符输入流、字符输出流</li>
-</ul>
-<h2 id="3-1-FileInputStream"><a href="#3-1-FileInputStream" class="headerlink" title="3.1.FileInputStream"></a>3.1.FileInputStream</h2><p>是InputStream的实现类</p>
-<h3 id="3-1-1-方法"><a href="#3-1-1-方法" class="headerlink" title="3.1.1.方法"></a>3.1.1.方法</h3><table>
-<thead>
-<tr>
-<th>public int read()</th>
-<th>每次读取一个字节,没有可读取返回1</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>public int read(byte[] buffer)</td>
-<td>用字节数组去读数据</td>
-</tr>
-<tr>
-<td>public byte[] readAllBytes() throws IOException</td>
-<td>一次读取所有字节虽然可以解决乱码问题，但是文件不能过大，如果文件过大，可能导致内存溢出。</td>
-</tr>
-</tbody></table>
-<p>使用方法:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：创建FileInputStream文件字节输入流管道，与源文件接通。</span><br><span class="line">第二步：调用read()方法开始读取文件的字节数据。</span><br><span class="line">第三步：调用close()方法释放资源</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-2-FileOutputStream"><a href="#3-2-FileOutputStream" class="headerlink" title="3.2.FileOutputStream"></a>3.2.FileOutputStream</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：创建FileOutputStream文件字节输出流管道，与目标文件接通。</span><br><span class="line">第二步：调用wirte()方法往文件中写数据</span><br><span class="line">第三步：调用close()方法释放资源</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-3-IO流资源释放"><a href="#3-3-IO流资源释放" class="headerlink" title="3.3.IO流资源释放"></a>3.3.IO流资源释放</h2><ol>
-<li><p>JDK7以前</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//有可能产生异常的代码</span></span><br><span class="line">&#125;<span class="keyword">catch</span>(异常类 e)&#123;</span><br><span class="line">    <span class="comment">//处理异常的代码</span></span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    <span class="comment">//释放资源的代码</span></span><br><span class="line">    <span class="comment">//finally里面的代码有一个特点，不管异常是否发生，finally里面的代码都会执行。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>JDK7以后</p>
-</li>
-</ol>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">try(资源对象1; 资源对象2;)&#123;</span><br><span class="line">    使用资源的代码</span><br><span class="line">&#125;catch(异常类 e)&#123;</span><br><span class="line">    处理异常的代码</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//这里没有释放资源的代码。它会自动释放资源</span><br></pre></td></tr></table></figure>
-
-<h1 id="4-IO流-字符流"><a href="#4-IO流-字符流" class="headerlink" title="4.IO流-字符流"></a>4.IO流-字符流</h1><h2 id="4-1-FileReader"><a href="#4-1-FileReader" class="headerlink" title="4.1.FileReader"></a>4.1.FileReader</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：创建FileReader对象与要读取的源文件接通</span><br><span class="line">第二步：调用read()方法读取文件中的字符</span><br><span class="line">第三步：调用close()方法关闭流</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-1-1-方法"><a href="#4-1-1-方法" class="headerlink" title="4.1.1.方法"></a>4.1.1.方法</h3><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>public FileReader(File file)</td>
-<td>构造</td>
-</tr>
-<tr>
-<td>public FileReader(String pathname)</td>
-<td>构造</td>
-</tr>
-<tr>
-<td>public int read()</td>
-<td>每次读取一个字符,没有可读返回-1</td>
-</tr>
-<tr>
-<td>public int read(char[] buffer)</td>
-<td>每次用一个字符数组去读取数据,没有可读返回-1</td>
-</tr>
-</tbody></table>
-<h2 id="4-1-FileWriter"><a href="#4-1-FileWriter" class="headerlink" title="4.1.FileWriter"></a>4.1.FileWriter</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：创建FileWirter对象与要读取的目标文件接通</span><br><span class="line">第二步：调用write(字符数据/字符数组/字符串)方法读取文件中的字符</span><br><span class="line">第三步：调用close()方法关闭流</span><br></pre></td></tr></table></figure>
-
-<h3 id="4-1-1-方法-1"><a href="#4-1-1-方法-1" class="headerlink" title="4.1.1.方法"></a>4.1.1.方法</h3><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>FileWriter(File file)</td>
-<td></td>
-</tr>
-<tr>
-<td>FileWriter(String filepath)</td>
-<td></td>
-</tr>
-<tr>
-<td>FileWriter(File file,boolean append)</td>
-<td>true为追加数据</td>
-</tr>
-<tr>
-<td>FileWriter(String filepath,boolean append)</td>
-<td>true为追加数据</td>
-</tr>
-<tr>
-<td>write(int c)</td>
-<td></td>
-</tr>
-<tr>
-<td>write(String str)</td>
-<td></td>
-</tr>
-<tr>
-<td>write(String str,int off,int len)</td>
-<td></td>
-</tr>
-<tr>
-<td>write(char[] cbuf)</td>
-<td></td>
-</tr>
-<tr>
-<td>write(char[] cbif,int off, int len)</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>写完之后必须close,flush之后才能完成写入</p>
-<h1 id="5-转换流"><a href="#5-转换流" class="headerlink" title="5.转换流"></a>5.转换流</h1><h2 id="5-1-InputStreamReader"><a href="#5-1-InputStreamReader" class="headerlink" title="5.1.InputStreamReader"></a>5.1.InputStreamReader</h2><p>InputStream(filepath)</p>
-<p>InputStreamReader(InputStream,charset)</p>
-<h2 id="5-2-OutputStreamReader"><a href="#5-2-OutputStreamReader" class="headerlink" title="5.2.OutputStreamReader"></a>5.2.OutputStreamReader</h2><p>OutputStream(filepath)</p>
-<p>OutputStreamReader(OutputStream)</p>
-<h1 id="6-打印流"><a href="#6-打印流" class="headerlink" title="6.打印流"></a>6.打印流</h1><p>就是print和println</p>
-<h1 id="7-数据流"><a href="#7-数据流" class="headerlink" title="7.数据流"></a>7.数据流</h1><p>把数据和数据的类型一并写到文件中去，读取的时候也将数据和数据类型一并读出来</p>
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>public DataOutputStream(OutputStream out)</td>
-<td>构造</td>
-</tr>
-<tr>
-<td>public final void write writeByte(int v)</td>
-<td></td>
-</tr>
-<tr>
-<td>public final void write writeInt(int v)</td>
-<td></td>
-</tr>
-<tr>
-<td>public final void write writeDouble(Double v)</td>
-<td></td>
-</tr>
-<tr>
-<td>public final void write writeUTF(String str)</td>
-<td></td>
-</tr>
-<tr>
-<td>public final void write write(int[],byte[])</td>
-<td></td>
-</tr>
-</tbody></table>
-<p>DataOutputStream 和 DataInputStream类似</p>
-<h1 id="8-序列化流"><a href="#8-序列化流" class="headerlink" title="8.序列化流"></a>8.序列化流</h1><blockquote>
-<p>序列化：意思就是把对象写到文件或者网络中去。（简单记：写对象）<br>反序列化：意思就是把对象从文件或者网络中读取出来。（简单记：读对象）</p>
-</blockquote>
-<p>对象需要序列化必须实现序列化接口</p>
-<p>第一步：先准备一个User类，必须让其实现Serializable接口</p>
-<p>第二步：再创建ObjectOutputStream流对象，调用writeObject方法对象到文件。</p>
-<p>读取需要反序列化 用 ObjectInputStream读取</p>
-<h1 id="扩展-FileUtiles"><a href="#扩展-FileUtiles" class="headerlink" title="扩展:FileUtiles"></a>扩展:FileUtiles</h1>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -437,7 +181,7 @@
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
@@ -450,112 +194,69 @@
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/05/16/javase%E5%9F%BA%E7%A1%80/5-File-IO/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/4-%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          异常,集合
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2023/05/16/javaweb/HTML,CSS,JSON/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HTML,CSS,JSON</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2023/05/14/javase%E5%9F%BA%E7%A1%80/1-%E9%9D%99%E6%80%81-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81-%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8E%A5%E5%8F%A3/" class="archive-article-date">
+  	<time datetime="2023-05-14T10:07:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-14</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2023/05/14/javase%E5%9F%BA%E7%A1%80/1-%E9%9D%99%E6%80%81-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81-%E6%8A%BD%E8%B1%A1%E5%92%8C%E6%8E%A5%E5%8F%A3/">静态,继承,多态,抽象和接口</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">JavaSE</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
-
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/JavaSE/">&amp;laquo; Prev</a><a class="page-number" href="/tags/JavaSE/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -579,9 +280,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
