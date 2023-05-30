@@ -79,6 +79,357 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-javase基础/4-集合" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/4-%E9%9B%86%E5%90%88/" class="article-date">
+  <time class="dt-published" datetime="2023-05-16T11:40:52.000Z" itemprop="datePublished">2023-05-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/JavaSE/">JavaSE</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/4-%E9%9B%86%E5%90%88/">异常,集合</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-异常"><a href="#1-异常" class="headerlink" title="1.异常"></a>1.异常</h1><h2 id="1-1-异常分类"><a href="#1-1-异常分类" class="headerlink" title="1.1.异常分类"></a>1.1.异常分类</h2><p>-Java.lang.Throwable</p>
+<p>​	-Error</p>
+<p>​	-Exception</p>
+<p>​		-RuntimeException</p>
+<p>​		-其他异常</p>
+<ul>
+<li>Error是系统级别错误</li>
+<li>Exception是异常,代表程序可能出现的问题</li>
+<li>运行时异常:编译不会出现的异常</li>
+<li>编译时异常:比那一阶段就会出现错误提醒的(日期解析异常)</li>
+</ul>
+<p>编译时异常解决方法:</p>
+<ol>
+<li>使用throws在方法上声明</li>
+<li>使用try…catch处理异常</li>
+</ol>
+<h2 id="1-2-自定义异常"><a href="#1-2-自定义异常" class="headerlink" title="1.2.自定义异常"></a>1.2.自定义异常</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1、必须让这个类继承自Exception，才能成为一个编译时异常类。</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">AgeIllegalException</span> <span class="keyword">extends</span> <span class="title class_">Exception</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">AgeIllegalException</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">AgeIllegalException</span><span class="params">(String message)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后在使用中throw new AgeIllegalException</p>
+<h2 id="1-3-异常处理"><a href="#1-3-异常处理" class="headerlink" title="1.3.异常处理"></a>1.3.异常处理</h2><ol>
+<li>在当前块进行try…catch处理</li>
+<li>在外部块进行try…catch处理</li>
+</ol>
+<h1 id="2-集合-Collection"><a href="#2-集合-Collection" class="headerlink" title="2.集合(Collection)"></a>2.集合(Collection)</h1><h2 id="2-1-集合的分类"><a href="#2-1-集合的分类" class="headerlink" title="2.1.集合的分类"></a>2.1.集合的分类</h2><ul>
+<li>Collection:单列集合顶层接口<br>List:有序,可重复,有索引<br>      ArrayList:底层数组<br>      LinkedList:底层链表<br>  Set:无序,不重复,没索引<br>      HashSet:底层哈希表<br>      TreeSet:底层红黑树<br>      LinkedHashSet:底层是双向链表 + 哈希表<br>Map:双列集合顶层接口<br>HashMap:底层哈希表<br>TreeMap:底层红黑树<br>LinkedHashMap:底层是双向链表 + 哈希表</li>
+</ul>
+<h2 id="2-2-Colloction方法"><a href="#2-2-Colloction方法" class="headerlink" title="2.2. Colloction方法"></a>2.2. Colloction方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Collection&lt;String&gt; c = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line"><span class="comment">//1.public boolean add(E e): 添加元素到集合</span></span><br><span class="line">c.add(<span class="string">&quot;java1&quot;</span>);</span><br><span class="line"><span class="comment">//2.public int size(): 获取集合的大小</span></span><br><span class="line">System.out.println(c.size()); <span class="comment">//5</span></span><br><span class="line"><span class="comment">//3.public boolean contains(Object obj): 判断集合中是否包含某个元素</span></span><br><span class="line">System.out.println(c.contains(<span class="string">&quot;java1&quot;</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="comment">//4.pubilc boolean remove(E e): 删除某个元素，如果有多个重复元素只能删除第一个</span></span><br><span class="line">System.out.println(c.remove(<span class="string">&quot;java1&quot;</span>)); <span class="comment">//true</span></span><br><span class="line"><span class="comment">//5.public void clear(): 清空集合的元素</span></span><br><span class="line">c.clear(); </span><br><span class="line"><span class="comment">//6.public boolean isEmpty(): 判断集合是否为空 是空返回true 反之返回false</span></span><br><span class="line">System.out.println(c.isEmpty()); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//7.public Object[] toArray(): 把集合转换为数组</span></span><br><span class="line">Object[] array = c.toArray();</span><br><span class="line"></span><br><span class="line"><span class="comment">//8.如果想把集合转换为指定类型的数组，可以使用下面的代码</span></span><br><span class="line">String[] array1 = c.toArray(<span class="keyword">new</span> <span class="title class_">String</span>[c.size()]);</span><br><span class="line">System.out.println(Arrays.toString(array1)); </span><br><span class="line"><span class="comment">//9.还可以把一个集合中的元素，添加到另一个集合中</span></span><br><span class="line">Collection&lt;String&gt; c1 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">c1.add(<span class="string">&quot;java1&quot;</span>);</span><br><span class="line">c1.add(<span class="string">&quot;java2&quot;</span>);</span><br><span class="line">Collection&lt;String&gt; c2 = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">c2.add(<span class="string">&quot;java3&quot;</span>);</span><br><span class="line">c2.add(<span class="string">&quot;java4&quot;</span>);</span><br><span class="line">c1.addAll(c2); <span class="comment">//把c2集合中的全部元素，添加到c1集合中去</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-3-遍历方法"><a href="#2-3-遍历方法" class="headerlink" title="2.3.遍历方法"></a>2.3.遍历方法</h2><ul>
+<li><p>迭代器 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Collection&lt;String&gt; c = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">c.add(<span class="string">&quot;赵敏&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;小昭&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;素素&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;灭绝&quot;</span>);</span><br><span class="line">System.out.println(c); <span class="comment">//[赵敏, 小昭, 素素, 灭绝]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//第一步：先获取迭代器对象</span></span><br><span class="line"><span class="comment">//解释：Iterator就是迭代器对象，用于遍历集合的工具)</span></span><br><span class="line">Iterator&lt;String&gt; it = c.iterator();</span><br><span class="line"></span><br><span class="line"><span class="comment">//第二步：用于判断当前位置是否有元素可以获取</span></span><br><span class="line"><span class="comment">//解释：hasNext()方法返回true，说明有元素可以获取；反之没有</span></span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">    <span class="comment">//第三步：获取当前位置的元素，然后自动指向下一个元素.</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">e</span> <span class="operator">=</span> it.next();</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>并发修改异常:</p>
+<p>在迭代器遍历的时候不允许使用集合的删除方法,使用迭代器的删除方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">List&lt;String&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">list.add(<span class="string">&quot;王麻子&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;小李子&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;李爱花&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;张全蛋&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;晓李&quot;</span>);</span><br><span class="line">list.add(<span class="string">&quot;李玉刚&quot;</span>);</span><br><span class="line">System.out.println(list); <span class="comment">// [王麻子, 小李子, 李爱花, 张全蛋, 晓李, 李玉刚]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//需求：找出集合中带&quot;李&quot;字的姓名，并从集合中删除</span></span><br><span class="line">Iterator&lt;String&gt; it = list.iterator();</span><br><span class="line"><span class="keyword">while</span>(it.hasNext())&#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">name</span> <span class="operator">=</span> it.next();</span><br><span class="line">    <span class="keyword">if</span>(name.contains(<span class="string">&quot;李&quot;</span>))&#123;</span><br><span class="line">        <span class="comment">//list.remove(name);</span></span><br><span class="line">        it.remove(); <span class="comment">//当前迭代器指向谁，就删除谁</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(list);</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>增强for</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Collection&lt;String&gt; c = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">c.add(<span class="string">&quot;赵敏&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;小昭&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;素素&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;灭绝&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//1.使用增强for遍历集合</span></span><br><span class="line"><span class="keyword">for</span>(String s: c)&#123;</span><br><span class="line">    System.out.println(s); </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.再尝试使用增强for遍历数组</span></span><br><span class="line">String[] arr = &#123;<span class="string">&quot;迪丽热巴&quot;</span>, <span class="string">&quot;古力娜扎&quot;</span>, <span class="string">&quot;稀奇哈哈&quot;</span>&#125;;</span><br><span class="line"><span class="keyword">for</span>(String name: arr)&#123;</span><br><span class="line">    System.out.println(name);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>foreach 可以对里面的参数进行处理之后输出</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">Collection&lt;String&gt; c = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">c.add(<span class="string">&quot;赵敏&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;小昭&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;素素&quot;</span>);</span><br><span class="line">c.add(<span class="string">&quot;灭绝&quot;</span>);</span><br><span class="line"><span class="comment">//调用forEach方法</span></span><br><span class="line"><span class="comment">//由于参数是一个Consumer接口，所以可以传递匿名内部类</span></span><br><span class="line">c.forEach(<span class="keyword">new</span> <span class="title class_">Consumer</span>&lt;String&gt;&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">accept</span><span class="params">(String s)</span>&#123;</span><br><span class="line">        System.out.println(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//也可以使用lambda表达式对匿名内部类进行简化</span></span><br><span class="line">c.forEach(s-&gt;System.out.println(s)); <span class="comment">//[赵敏, 小昭, 素素, 灭绝]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="3-List"><a href="#3-List" class="headerlink" title="3.List"></a>3.List</h1><p>有序,可重复,有索引</p>
+<h2 id="3-1-List方法"><a href="#3-1-List方法" class="headerlink" title="3.1.List方法"></a>3.1.List方法</h2><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void add(int index, E element)</td>
+<td>在集合指定位置中插入</td>
+</tr>
+<tr>
+<td>E remove(int index)</td>
+<td>删除指定索引处的元素并返回被删除的元素</td>
+</tr>
+<tr>
+<td>E set(int index, E element)</td>
+<td>修改指定索引处的元素,返回被修改的元素</td>
+</tr>
+<tr>
+<td>E get(int index)</td>
+<td>返回指定索引处的元素</td>
+</tr>
+</tbody></table>
+<h2 id="3-2-循环方式"><a href="#3-2-循环方式" class="headerlink" title="3.2.循环方式"></a>3.2.循环方式</h2><p>继承自collection的三种 + 普通for循环</p>
+<h2 id="3-3-ArrayList底层原理"><a href="#3-3-ArrayList底层原理" class="headerlink" title="3.3.ArrayList底层原理"></a>3.3.ArrayList底层原理</h2><ol>
+<li>基于数组实现,但是集合长度可变 - &gt; 查询慢,增删快</li>
+</ol>
+<blockquote>
+<p>① 利用无参构造器创建的集合,会在底层创建一个默认长度为0的数组</p>
+<p>②添加第一个元素时,底层会创建一个新的长度为10的数组</p>
+<p>③存满时,会扩容1.5被</p>
+<p>④如果依次添加多个元素,1.5倍也放不下,则长度扩容到新创建数组的长度</p>
+</blockquote>
+<p>数组扩容不是在原数组中扩容,是重新创建一新数组</p>
+<h2 id="3-4-LinkedList底层原理"><a href="#3-4-LinkedList底层原理" class="headerlink" title="3.4.LinkedList底层原理"></a>3.4.LinkedList底层原理</h2><ol>
+<li>基于双向链表实现 - &gt; 增删快,查询快</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>void addFirsts(E e)</td>
+<td>开头插入</td>
+</tr>
+<tr>
+<td>void addLast(E e)</td>
+<td>末尾插入</td>
+</tr>
+<tr>
+<td>E getFirst()</td>
+<td>返回第一个元素</td>
+</tr>
+<tr>
+<td>E getLast()</td>
+<td>返回最后一个</td>
+</tr>
+<tr>
+<td>E removeFirst()</td>
+<td>删除返回第一个</td>
+</tr>
+<tr>
+<td>E removeLast()</td>
+<td>删除返回最后一个</td>
+</tr>
+</tbody></table>
+<h1 id="4-Set"><a href="#4-Set" class="headerlink" title="4.Set"></a>4.Set</h1><h2 id="4-1-分类"><a href="#4-1-分类" class="headerlink" title="4.1.分类"></a>4.1.分类</h2><ul>
+<li>HashSet:无序,不重复,无索引</li>
+<li>LinkedHashSet:有序,不重复,五索引</li>
+<li>TreeSet: 排序,不重复,无索引</li>
+</ul>
+<h2 id="4-2-HashSet"><a href="#4-2-HashSet" class="headerlink" title="4.2.HashSet"></a>4.2.HashSet</h2><h3 id="4-2-1-底层原理"><a href="#4-2-1-底层原理" class="headerlink" title="4.2.1.底层原理:"></a>4.2.1.底层原理:</h3><ul>
+<li>JDK8前: 哈希表 &#x3D; 数组 + 链表</li>
+<li>JDK8后: 哈希表 &#x3D; 数组 + 链表 + 红黑树</li>
+</ul>
+<p>JDK8开始,当链表的长度超过8,就会把链表转换为红黑树</p>
+<h3 id="4-2-2-去重原理"><a href="#4-2-2-去重原理" class="headerlink" title="4.2.2.去重原理"></a>4.2.2.去重原理</h3><ul>
+<li>用hashCode确定底层数组中存储位置</li>
+<li>用equals确认添加元素是否已存在</li>
+</ul>
+<h2 id="4-3-LinkedHashSet"><a href="#4-3-LinkedHashSet" class="headerlink" title="4.3.LinkedHashSet"></a>4.3.LinkedHashSet</h2><p>额外新增了一个双向列表来维护元素的存取顺序</p>
+<h2 id="4-4-TreeSet"><a href="#4-4-TreeSet" class="headerlink" title="4.4.TreeSet"></a>4.4.TreeSet</h2><p>存储String和Integer类型的对象自带排序规则</p>
+<p>存储自定义类型的元素需要自定义排序规则:</p>
+<blockquote>
+<p>第一种：让元素的类实现Comparable接口，重写compareTo方法</p>
+</blockquote>
+<blockquote>
+<p>第二种：在创建TreeSet集合时，通过构造方法传递Compartor比较器对象</p>
+</blockquote>
+<h1 id="5-Colletions工具类"><a href="#5-Colletions工具类" class="headerlink" title="5.Colletions工具类"></a>5.Colletions工具类</h1><h2 id="5-1-方法"><a href="#5-1-方法" class="headerlink" title="5.1.方法"></a>5.1.方法</h2><ul>
+<li><table>
+<thead>
+<tr>
+<th>静态方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>addAll(集合,元素们)</td>
+<td>批量添加元素</td>
+</tr>
+<tr>
+<td>shuffle(List)</td>
+<td>打乱List元素</td>
+</tr>
+<tr>
+<td>sort(List)</td>
+<td>升序排序</td>
+</tr>
+<tr>
+<td>sort(List, Comparator)</td>
+<td>用指定规则进行排序</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h1 id="6-Map"><a href="#6-Map" class="headerlink" title="6.Map"></a>6.Map</h1><h2 id="6-1-分类"><a href="#6-1-分类" class="headerlink" title="6.1.分类"></a>6.1.分类</h2><ol>
+<li>HashMap:无序,不重复,无索引</li>
+<li>LinkedHashMap:有序,不重复,无索引</li>
+<li>TreeMap:升序排序,不重复,无索引</li>
+</ol>
+<h2 id="6-2-Map集合方法"><a href="#6-2-Map集合方法" class="headerlink" title="6.2.Map集合方法"></a>6.2.Map集合方法</h2><table>
+<thead>
+<tr>
+<th>方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>put(key,value)</td>
+<td>添加</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>返回集合大小</td>
+</tr>
+<tr>
+<td>clear()</td>
+<td>清空集合</td>
+</tr>
+<tr>
+<td>isEmpty()</td>
+<td>判断是否空</td>
+</tr>
+<tr>
+<td>get(Object)</td>
+<td>返回键值对应值</td>
+</tr>
+<tr>
+<td>remove(Object)</td>
+<td>根据键删除元素</td>
+</tr>
+<tr>
+<td>containsKey(Object)</td>
+<td>判断是否包含某个键</td>
+</tr>
+<tr>
+<td>containsValue(Object)</td>
+<td>判断是否包含某个值</td>
+</tr>
+<tr>
+<td>Set<K> keySet()</td>
+<td>获得全部键的集合</td>
+</tr>
+<tr>
+<td>Collection<V> values()</td>
+<td>获得全部值的结合</td>
+</tr>
+</tbody></table>
+<h2 id="6-3-遍历方法"><a href="#6-3-遍历方法" class="headerlink" title="6.3.遍历方法"></a>6.3.遍历方法</h2><ul>
+<li>键找值</li>
+<li>值找键</li>
+<li>forEach(new BiConsumer)</li>
+</ul>
+<h2 id="6-4-HashMap"><a href="#6-4-HashMap" class="headerlink" title="6.4.HashMap"></a>6.4.HashMap</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">HashMap底层数据结构: 哈希表结构</span><br><span class="line">	JDK8之前的哈希表 = 数组+链表</span><br><span class="line">	JDK8之后的哈希表 = 数组+链表+红黑树</span><br><span class="line">	哈希表是一种增删改查数据，性能相对都较好的数据结构</span><br><span class="line">	</span><br><span class="line">往HashMap集合中键值对数据时，底层步骤如下</span><br><span class="line">	第<span class="number">1</span>步：当你第一次往HashMap集合中存储键值对时，底层会创建一个长度为<span class="number">16</span>的数组</span><br><span class="line">	第<span class="number">2</span>步：把键然后将键和值封装成一个对象，叫做Entry对象</span><br><span class="line">	第<span class="number">3</span>步：再根据Entry对象的键计算hashCode值（和值无关）</span><br><span class="line">	第<span class="number">4</span>步：利用hashCode值和数组的长度做一个类似求余数的算法，会得到一个索引位置</span><br><span class="line">	第<span class="number">5</span>步：判断这个索引的位置是否为<span class="literal">null</span>，如果为<span class="literal">null</span>,就直接将这个Entry对象存储到这个索引位置</span><br><span class="line">		   如果不为<span class="literal">null</span>，则还需要进行第<span class="number">6</span>步的判断</span><br><span class="line">	第<span class="number">6</span>步：继续调用equals方法判断两个对象键是否相同</span><br><span class="line">		  如果equals返回<span class="literal">false</span>，则以链表的形式往下挂</span><br><span class="line">		  如果equals方法<span class="literal">true</span>,则认为键重复，此时新的键值对会替换就的键值对。</span><br><span class="line">	</span><br><span class="line">HashMap底层需要注意这几点：</span><br><span class="line">	<span class="number">1.</span>底层数组默认长度为<span class="number">16</span>，如果数组中有超过<span class="number">12</span>个位置已经存储了元素，则会对数组进行扩容<span class="number">2</span>倍</span><br><span class="line">	  数组扩容的加载因子是<span class="number">0.75</span>，意思是：<span class="number">16</span>*<span class="number">0.75</span>=<span class="number">12</span> 	</span><br><span class="line">   	</span><br><span class="line">    <span class="number">2.</span>数组的同一个索引位置有多个元素、并且在<span class="number">8</span>个元素以内(包括<span class="number">8</span>)，则以链表的形式存储</span><br><span class="line">    	JDK7版本：链表采用头插法（新元素往链表的头部添加）</span><br><span class="line">    	JDK8版本：链表采用尾插法（新元素我那个链表的尾部添加）</span><br><span class="line">    	</span><br><span class="line">    <span class="number">3.</span>数组的同一个索引位置有多个元素、并且超过了<span class="number">8</span>个，则以红黑树形式存储</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-5-LinkedHashMap"><a href="#6-5-LinkedHashMap" class="headerlink" title="6.5.LinkedHashMap"></a>6.5.LinkedHashMap</h2><p>多维护一个双向链表</p>
+<h2 id="6-6-TreeMap"><a href="#6-6-TreeMap" class="headerlink" title="6.6.TreeMap"></a>6.6.TreeMap</h2><ul>
+<li><p>TreeMap集合的特点也是由键决定的，默认按照键的升序排列，键不重复，也是无索引的。</p>
+</li>
+<li><p>TreeMap集合的底层原理和TreeSet也是一样的，底层都是红黑树实现的。所以可以对键进行排序。</p>
+</li>
+</ul>
+<h1 id="7-Stream流操作"><a href="#7-Stream流操作" class="headerlink" title="7.Stream流操作"></a>7.Stream流操作</h1><h2 id="7-1-创建Stream流"><a href="#7-1-创建Stream流" class="headerlink" title="7.1.创建Stream流"></a>7.1.创建Stream流</h2><p>方法:</p>
+<ul>
+<li>List.stream()</li>
+<li>Set.stream()</li>
+<li>Map<br>Map.keySet().stream()<br>Map.values().stream()<br>Map.entrySet().stream()</li>
+<li>Arrays.stream()</li>
+<li>Stream.of()</li>
+</ul>
+<h2 id="7-2-中间方法"><a href="#7-2-中间方法" class="headerlink" title="7.2.中间方法"></a>7.2.中间方法</h2><table>
+<thead>
+<tr>
+<th>中间方法名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>filter</td>
+<td>过滤</td>
+</tr>
+<tr>
+<td>sorted</td>
+<td>升序排序</td>
+</tr>
+<tr>
+<td>sorted</td>
+<td>用 Comparator排序</td>
+</tr>
+<tr>
+<td>limit</td>
+<td>获取前几个</td>
+</tr>
+<tr>
+<td>skip</td>
+<td>跳过前几个</td>
+</tr>
+<tr>
+<td>distinct</td>
+<td>去重</td>
+</tr>
+<tr>
+<td>map</td>
+<td>元素加工返回新的流对象</td>
+</tr>
+<tr>
+<td>concat</td>
+<td>合并流</td>
+</tr>
+</tbody></table>
+<h2 id="7-3-终结方法"><a href="#7-3-终结方法" class="headerlink" title="7.3.终结方法"></a>7.3.终结方法</h2><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>forEach</td>
+<td>对流运算后的元素进行遍历</td>
+</tr>
+<tr>
+<td>count</td>
+<td>返回运算后的元素个数</td>
+</tr>
+<tr>
+<td>max</td>
+<td>返回最大值 可以传比较器</td>
+</tr>
+<tr>
+<td>min</td>
+<td>返回最小值 可以传比较器</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/16/javase%E5%9F%BA%E7%A1%80/4-%E9%9B%86%E5%90%88/" data-id="clhzvhyw7000bro8a4qet542l" data-title="异常,集合" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-javase基础/5-File-IO" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/05/16/javase%E5%9F%BA%E7%A1%80/5-File-IO/" class="article-date">
@@ -1653,6 +2004,10 @@
       <ul>
         
           <li>
+            <a href="/2023/05/29/mysql/">mysql</a>
+          </li>
+        
+          <li>
             <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">junit-反射-注解</a>
           </li>
         
@@ -1666,10 +2021,6 @@
         
           <li>
             <a href="/2023/05/24/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B/">多线程</a>
-          </li>
-        
-          <li>
-            <a href="/2023/05/24/javaweb/SpringBoot/">SpringBoot</a>
           </li>
         
       </ul>

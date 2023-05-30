@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>mysql | 学习笔记</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="1.数据库1.1.安装mysql 解压安装包  添加环境变量 12MYSQL_HOMEPath -&gt; 新建 %MYSQL_HOME%\bin  cmd 输入 mysql验证环境变量添加成功  初始化(管理员权限,cmd) 12mysqld --initialize-insecuremysqld -install  启动服务 123net start mysql  &#x2F;&#x2F; 启动mysql服务">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql">
+<meta property="og:url" content="http://example.com/2023/05/29/mysql/index.html">
+<meta property="og:site_name" content="学习笔记">
+<meta property="og:description" content="1.数据库1.1.安装mysql 解压安装包  添加环境变量 12MYSQL_HOMEPath -&gt; 新建 %MYSQL_HOME%\bin  cmd 输入 mysql验证环境变量添加成功  初始化(管理员权限,cmd) 12mysqld --initialize-insecuremysqld -install  启动服务 123net start mysql  &#x2F;&#x2F; 启动mysql服务">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-29T12:10:38.000Z">
+<meta property="article:modified_time" content="2023-05-29T13:11:23.411Z">
+<meta property="article:author" content="Kevin Yang">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">学习笔记</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">从开始到放弃</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="RSS 订阅"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="搜索"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-mysql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2023/05/29/mysql/" class="article-date">
+  <time class="dt-published" datetime="2023-05-29T12:10:38.000Z" itemprop="datePublished">2023-05-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      mysql
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="1-数据库"><a href="#1-数据库" class="headerlink" title="1.数据库"></a>1.数据库</h1><h2 id="1-1-安装mysql"><a href="#1-1-安装mysql" class="headerlink" title="1.1.安装mysql"></a>1.1.安装mysql</h2><ul>
+<li><p>解压安装包</p>
+</li>
+<li><p>添加环境变量</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MYSQL_HOME</span><br><span class="line">Path -&gt; 新建 %MYSQL_HOME%\bin</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>cmd 输入 mysql验证环境变量添加成功</p>
+</li>
+<li><p>初始化(管理员权限,cmd)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysqld --initialize-insecure</span><br><span class="line">mysqld -install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启动服务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">net start mysql  // 启动mysql服务</span><br><span class="line">    </span><br><span class="line">net stop mysql  // 停止mysql服务</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改密码 登录</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysqladmin -u root password 1234</span><br><span class="line">mysql -uroot -p1234</span><br><span class="line"></span><br><span class="line">mysql -u用户名 -p密码 -h要连接的mysql服务器的ip地址(默认127.0.0.1) -P端口号(默认3306)</span><br></pre></td></tr></table></figure>
+
+<p>卸载</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">net stop mysql</span><br><span class="line">mysqld -remove mysql</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="1-2-数据模型"><a href="#1-2-数据模型" class="headerlink" title="1.2.数据模型"></a>1.2.数据模型</h2><ul>
+<li><p>关系型数据库<br>使用表存储数据，格式统一，便于维护<br>使用SQL语言操作，标准统一，使用方便，可用于复杂查询</p>
+</li>
+<li><p>数据模型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">客户端--SQL--&gt;DBMS-&gt;数据库-&gt;表</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="1-3-通用语法"><a href="#1-3-通用语法" class="headerlink" title="1.3.通用语法"></a>1.3.通用语法</h2><ol>
+<li><p>以分号结尾,</p>
+</li>
+<li><p>用空格增加可读性</p>
+</li>
+<li><p>不区分大小写</p>
+</li>
+<li><p>注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- 或者 # 单行注释</span><br><span class="line">/* */ 多行注释</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="1-4-SQL语句分类"><a href="#1-4-SQL语句分类" class="headerlink" title="1.4.SQL语句分类"></a>1.4.SQL语句分类</h2><p>SQL语句根据其功能被分为四大类：DDL、DML、DQL、DCL </p>
+<table>
+<thead>
+<tr>
+<th><strong>分类</strong></th>
+<th><strong>全称</strong></th>
+<th><strong>说明</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DDL</td>
+<td>Data Definition  Language</td>
+<td>数据定义语言，用来定义数据库对象(数据库，表，字段)</td>
+</tr>
+<tr>
+<td>DML</td>
+<td>Data Manipulation  Language</td>
+<td>数据操作语言，用来对数据库表中的数据进行增删改</td>
+</tr>
+<tr>
+<td>DQL</td>
+<td>Data Query Language</td>
+<td>数据查询语言，用来查询数据库中表的记录</td>
+</tr>
+<tr>
+<td>DCL</td>
+<td>Data Control  Language</td>
+<td>数据控制语言，用来创建数据库用户、控制数据库的访问权限</td>
+</tr>
+</tbody></table>
+<h1 id="2-图形化工具的安装和配置"><a href="#2-图形化工具的安装和配置" class="headerlink" title="2.图形化工具的安装和配置"></a>2.图形化工具的安装和配置</h1><h1 id="3-DDL"><a href="#3-DDL" class="headerlink" title="3.DDL"></a>3.DDL</h1><p>查询、创建、使用、删除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">show databases;//查询所有数据库</span><br><span class="line">select database();//查询当前数据库</span><br><span class="line"></span><br><span class="line">create database [ if not exists ] 数据库名; //创建数据库</span><br><span class="line"></span><br><span class="line">use 数据库名 ;</span><br><span class="line">drop database [ if exists ] 数据库名 ;</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-对表操作-DL"><a href="#4-对表操作-DL" class="headerlink" title="4.对表操作(DL)"></a>4.对表操作(DL)</h1><h2 id="4-1-新增"><a href="#4-1-新增" class="headerlink" title="4.1.新增"></a>4.1.新增</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create table  表名(</span><br><span class="line">	字段1  字段1类型 [约束]  [comment  字段1注释 ],</span><br><span class="line">	字段2  字段2类型 [约束]  [comment  字段2注释 ],</span><br><span class="line">	......</span><br><span class="line">	字段n  字段n类型 [约束]  [comment  字段n注释 ] </span><br><span class="line">) [ comment  表注释 ] ;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-1-1-约束"><a href="#4-1-1-约束" class="headerlink" title="4.1.1.约束"></a>4.1.1.约束</h3><p>在MySQL数据库当中，提供了以下5种约束：</p>
+<table>
+<thead>
+<tr>
+<th><strong>约束</strong></th>
+<th><strong>描述</strong></th>
+<th><strong>关键字</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>非空约束</td>
+<td>限制该字段值不能为null</td>
+<td>not null</td>
+</tr>
+<tr>
+<td>唯一约束</td>
+<td>保证字段的所有数据都是唯一、不重复的</td>
+<td>unique</td>
+</tr>
+<tr>
+<td>主键约束</td>
+<td>主键是一行数据的唯一标识，要求非空且唯一</td>
+<td>primary key</td>
+</tr>
+<tr>
+<td>默认约束</td>
+<td>保存数据时，如果未指定该字段值，则采用默认值</td>
+<td>default</td>
+</tr>
+<tr>
+<td>外键约束</td>
+<td>让两张表的数据建立连接，保证数据的一致性和完整性</td>
+<td>foreign key</td>
+</tr>
+</tbody></table>
+<h3 id="4-1-2-数据类型"><a href="#4-1-2-数据类型" class="headerlink" title="4.1.2.数据类型"></a>4.1.2.数据类型</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>大小</th>
+<th>有符号(SIGNED)范围</th>
+<th>无符号(UNSIGNED)范围</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>TINYINT</td>
+<td>1byte</td>
+<td>(-128，127)</td>
+<td>(0，255)</td>
+<td>小整数值</td>
+</tr>
+<tr>
+<td>SMALLINT</td>
+<td>2bytes</td>
+<td>(-32768，32767)</td>
+<td>(0，65535)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td>MEDIUMINT</td>
+<td>3bytes</td>
+<td>(-8388608，8388607)</td>
+<td>(0，16777215)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td>INT&#x2F;INTEGER</td>
+<td>4bytes</td>
+<td>(-2147483648，2147483647)</td>
+<td>(0，4294967295)</td>
+<td>大整数值</td>
+</tr>
+<tr>
+<td>BIGINT</td>
+<td>8bytes</td>
+<td>(-2^63，2^63-1)</td>
+<td>(0，2^64-1)</td>
+<td>极大整数值</td>
+</tr>
+<tr>
+<td>FLOAT</td>
+<td>4bytes</td>
+<td>(-3.402823466 E+38，3.402823466351 E+38)</td>
+<td>0 和 (1.175494351  E-38，3.402823466 E+38)</td>
+<td>单精度浮点数值</td>
+</tr>
+<tr>
+<td>DOUBLE</td>
+<td>8bytes</td>
+<td>(-1.7976931348623157 E+308，1.7976931348623157 E+308)</td>
+<td>0 和  (2.2250738585072014 E-308，1.7976931348623157 E+308)</td>
+<td>双精度浮点数值</td>
+</tr>
+<tr>
+<td>DECIMAL</td>
+<td></td>
+<td>依赖于M(精度)和D(标度)的值</td>
+<td>依赖于M(精度)和D(标度)的值</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>日期时间类型</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>大小</th>
+<th>范围</th>
+<th>格式</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DATE</td>
+<td>3</td>
+<td>1000-01-01 至  9999-12-31</td>
+<td>YYYY-MM-DD</td>
+<td>日期值</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>3</td>
+<td>-838:59:59 至  838:59:59</td>
+<td>HH:MM:SS</td>
+<td>时间值或持续时间</td>
+</tr>
+<tr>
+<td>YEAR</td>
+<td>1</td>
+<td>1901 至 2155</td>
+<td>YYYY</td>
+<td>年份值</td>
+</tr>
+<tr>
+<td>DATETIME</td>
+<td>8</td>
+<td>1000-01-01 00:00:00 至 9999-12-31 23:59:59</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>混合日期和时间值</td>
+</tr>
+<tr>
+<td>TIMESTAMP</td>
+<td>4</td>
+<td>1970-01-01 00:00:01 至 2038-01-19 03:14:07</td>
+<td>YYYY-MM-DD HH:MM:SS</td>
+<td>混合日期和时间值，时间戳</td>
+</tr>
+</tbody></table>
+<h2 id="4-2-查询"><a href="#4-2-查询" class="headerlink" title="4.2.查询"></a>4.2.查询</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br><span class="line"></span><br><span class="line">desc 表名 ;#可以查看指定表的字段、字段的类型、是否可以为NULL、是否存在默认值等信息</span><br><span class="line"></span><br><span class="line">show create table 表名 ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-3-修改"><a href="#4-3-修改" class="headerlink" title="4.3.修改"></a>4.3.修改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add  字段名  类型(长度)  [comment 注释]  [约束];</span><br><span class="line"></span><br><span class="line">alter table tb_emp add  qq  varchar(11) comment &#x27;QQ号码&#x27;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-4-删除"><a href="#4-4-删除" class="headerlink" title="4.4.删除"></a>4.4.删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop  table [ if exists ]  表名;</span><br></pre></td></tr></table></figure>
+
+<h1 id="5-数据操作DML"><a href="#5-数据操作DML" class="headerlink" title="5.数据操作DML"></a>5.数据操作DML</h1><h2 id="5-1-新增"><a href="#5-1-新增" class="headerlink" title="5.1.新增"></a>5.1.新增</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values (值1, 值2, ...);</span><br><span class="line">insert into 表名 (字段名1, 字段名2) values (值1, 值2), (值1, 值2);</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-2-修改"><a href="#5-2-修改" class="headerlink" title="5.2.修改"></a>5.2.修改</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段名1 = 值1 , 字段名2 = 值2 , .... [where 条件] ;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-3-删除"><a href="#5-3-删除" class="headerlink" title="5.3.删除"></a>5.3.删除</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名  [where  条件] ;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/05/29/mysql/" data-id="cli8vuiu80000hs8adk82b6i9" data-title="mysql" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">junit-反射-注解</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaSE/">JavaSE</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaSE/" rel="tag">JavaSE</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" rel="tag">基础阶段</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JavaSE/" style="font-size: 20px;">JavaSE</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/%E5%9F%BA%E7%A1%80%E9%98%B6%E6%AE%B5/" style="font-size: 15px;">基础阶段</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2023/05/29/mysql/">mysql</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/28/javase%E5%9F%BA%E7%A1%80/junit-%E5%8F%8D%E5%B0%84-%E6%B3%A8%E8%A7%A3/">junit-反射-注解</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/26/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E6%B1%A0-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/">线程池_网络编程</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/25/javaweb/springboot%E8%AF%B7%E6%B1%82%E5%93%8D%E5%BA%94/">springboot请求响应</a>
+          </li>
+        
+          <li>
+            <a href="/2023/05/24/javase%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B/">多线程</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2023 Kevin Yang<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
